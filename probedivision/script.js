@@ -9,7 +9,9 @@ let rechenweg = "";
 if (button) {
   button.addEventListener("click", () => {
     factors.length = 0;
+    way.innerHTML = "Rechenweg";
     rechenweg = "";
+
     const number = Number(input.value);
     let x = number;
     output.innerHTML = "";
@@ -55,7 +57,7 @@ if (button) {
     }
     output.innerHTML = outtext;
 
-    rechenweg = rechenweg + "Ende bei 1"
+    rechenweg = rechenweg + "Ende bei 1";
     way.innerHTML = rechenweg;
   });
 }

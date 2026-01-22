@@ -1,6 +1,5 @@
 body {
   background-color: #69d5ff96;
-  height: 100vh;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -20,8 +19,20 @@ input {
   padding: 5px 10px;
 }
 
-div {
-  width: 300px;
+#output {
+  width: 60%;
+  min-height: 16px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #6eaadb;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+#weg {
+  width: 60%;
   min-height: 16px;
   margin-top: 20px;
   font-size: 20px;
@@ -44,4 +55,10 @@ div {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  div {
+    width: 90%;
+  }
 }
