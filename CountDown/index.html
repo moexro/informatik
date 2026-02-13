@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>15-Minuten Countdown</title>
+<title>Countdown Timer</title>
 <style>
     body {
         margin: 0;
@@ -48,17 +48,20 @@
     <button id="startBtn">Start</button>
     <button id="stopBtn">Stop</button>
     <button id="resetBtn">Reset</button>
+    <button id="toggleBtn">1 Min</button>
 </div>
 
 <script>
-let totalTime = 15 * 60; // 15 Minuten in Sekunden
+let totalTime = 15 * 60; // Startwert: 15 Minuten
 let remainingTime = totalTime;
 let interval = null;
+let toggleState = false; // false = 15min, true = 1min
 
 const timerDisplay = document.getElementById('timer');
 const startBtn = document.getElementById('startBtn');
 const stopBtn = document.getElementById('stopBtn');
 const resetBtn = document.getElementById('resetBtn');
+const toggleBtn = document.getElementById('toggleBtn');
 
 function updateDisplay() {
     let minutes = Math.floor(remainingTime / 60);
@@ -67,7 +70,7 @@ function updateDisplay() {
 }
 
 function startTimer() {
-    if (interval) return; // keine Doppelstarts
+    if (interval) return;
     interval = setInterval(() => {
         if (remainingTime > 0) {
             remainingTime--;
@@ -90,9 +93,19 @@ function resetTimer() {
     updateDisplay();
 }
 
+function toggleTimer() {
+    stopTimer();
+    toggleState = !toggleState;
+    totalTime = toggleState ? 60 : 15 * 60;
+    remainingTime = totalTime;
+    toggleBtn.textContent = toggleState ? '15 Min' : '1 Min';
+    updateDisplay();
+}
+
 startBtn.addEventListener('click', startTimer);
 stopBtn.addEventListener('click', stopTimer);
 resetBtn.addEventListener('click', resetTimer);
+toggleBtn.addEventListener('click', toggleTimer);
 
 updateDisplay();
 </script>
