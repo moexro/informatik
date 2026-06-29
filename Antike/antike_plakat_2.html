@@ -58,26 +58,34 @@
             font-weight: bold;
         }
         
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .gallery {
+            display: flex;
+            flex-direction: column;
             gap: 8mm;
             flex: 1;
+        }
+        
+        .gallery-row {
+            display: flex;
+            gap: 8mm;
+            height: 75mm;
         }
         
         .steckbrief {
             border: 2px solid #9B7D54;
             background: white;
             border-radius: 4px;
-            min-height: 85mm;
             overflow: hidden;
+            flex: 1;
+            min-width: 0;
         }
         
         .steckbrief img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
+            background: white;
         }
         
         @media print {
@@ -105,17 +113,78 @@
             <div class="period">800 v.Chr. – 500 n.Chr.</div>
         </div>
         
-        <div class="grid">
-            <div class="steckbrief"><img src="IMG_3290.png" alt="Römische Republik/Senat und Volk von Rom"></div>
-            <div class="steckbrief"><img src="IMG_3289.png" alt="Byzanz - das zweite Rom"></div>
-            <div class="steckbrief"><img src="IMG_3288.png" alt="Griechische Stadtstaaten"></div>
-            <div class="steckbrief"><img src="IMG_3285.png" alt="Demokratie Athens"></div>
-            <div class="steckbrief"><img src="IMG_3292.jpeg" alt="Mission und Macht"></div>
-            <div class="steckbrief"><img src="IMG_3287.jpeg" alt="Franken, Merowinger, Karolinger"></div>
-            <div class="steckbrief"><img src="IMG_3286.jpeg" alt="Imperium Romanum - Caesar und Augustus"></div>
-            <div class="steckbrief"><img src="IMG_3284.jpeg" alt="Alexander der Große"></div>
-            <div class="steckbrief"><img src="IMG_3291.jpeg" alt="Römer, jüdische Aufstände und frühe Christen"></div>
+        <div class="gallery" id="gallery">
+            <!-- Reihe 1 -->
+            <div class="gallery-row">
+                <div class="steckbrief"><img src="IMG_3290.png" alt="Römische Republik/Senat und Volk von Rom"></div>
+                <div class="steckbrief"><img src="IMG_3289.png" alt="Byzanz - das zweite Rom"></div>
+                <div class="steckbrief"><img src="IMG_3288.png" alt="Griechische Stadtstaaten"></div>
+            </div>
+            <!-- Reihe 2 -->
+            <div class="gallery-row">
+                <div class="steckbrief"><img src="IMG_3285.png" alt="Demokratie Athens"></div>
+                <div class="steckbrief"><img src="IMG_3292.jpeg" alt="Mission und Macht"></div>
+                <div class="steckbrief"><img src="IMG_3287.jpeg" alt="Franken, Merowinger, Karolinger"></div>
+            </div>
+            <!-- Reihe 3 -->
+            <div class="gallery-row">
+                <div class="steckbrief"><img src="IMG_3286.jpeg" alt="Imperium Romanum - Caesar und Augustus"></div>
+                <div class="steckbrief"><img src="IMG_3284.jpeg" alt="Alexander der Große"></div>
+                <div class="steckbrief"><img src="IMG_3291.jpeg" alt="Römer, jüdische Aufstände und frühe Christen"></div>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Optimale Höhe für Galeriereihen berechnen
+        function layoutGallery() {
+            const gallery = document.getElementById('gallery');
+            const rows = gallery.querySelectorAll('.gallery-row');
+            const gap = 8; // mm in px (ca.)
+            
+            rows.forEach(row => {
+                const boxes = row.querySelectorAll('.steckbrief');
+                const imgs = Array.from(boxes).map(box => box.querySelector('img'));
+                
+                // Warten bis alle Bilder geladen sind
+                Promise.all(imgs.map(img => {
+                    return new Promise(resolve => {
+                        if (img.complete) {
+                            resolve();
+                        } else {
+                            img.onload = resolve;
+                            img.onerror = resolve;
+                        }
+                    });
+                })).then(() => {
+                    // Aspekt-Verhältnisse auslesen
+                    const aspects = imgs.map(img => img.naturalWidth / img.naturalHeight);
+                    
+                    // Verfügbare Breite berechnen (in relativen Einheiten)
+                    const totalGapWidth = (boxes.length - 1) * gap;
+                    const availableWidth = row.offsetWidth - totalGapWidth;
+                    
+                    // Optimale Höhe berechnen
+                    const optimalHeight = availableWidth / (aspects.reduce((a, b) => a + b, 0));
+                    
+                    // Höhe setzen
+                    row.style.height = optimalHeight + 'px';
+                    
+                    // Box-Breiten basierend auf Aspekt-Verhältnis anpassen
+                    boxes.forEach((box, idx) => {
+                        const width = aspects[idx] * optimalHeight;
+                        box.style.flex = `0 0 ${width}px`;
+                    });
+                });
+            });
+        }
+        
+        // Initial layout
+        window.addEventListener('load', layoutGallery);
+        window.addEventListener('resize', layoutGallery);
+        
+        // Kleine Verzögerung für Edge-Cases
+        setTimeout(layoutGallery, 100);
+    </script>
 </body>
 </html>
