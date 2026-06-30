@@ -185,9 +185,15 @@
             font-size: 0.9em;
             font-weight: bold;
             margin-right: 12px;
+            flex-shrink: 0;
         }
         .theme-title {
             flex: 1;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
         }
     </style>
 </head>
@@ -199,7 +205,7 @@
         </header>
 
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('barock')">🎭 Barock (19 Themen)</button>
+            <button class="tab-btn active" onclick="switchTab('barock')">🎭 Barock (18 Themen)</button>
             <button class="tab-btn" onclick="switchTab('aufklaerung')">💡 Aufklärung (12 Themen)</button>
         </div>
 
@@ -210,7 +216,7 @@
                 <!-- BAROCK 1 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">1</div>
                             <div class="theme-title">Die zeitgeschichtliche Einordnung der Epoche</div>
                         </div>
@@ -221,7 +227,7 @@
                             <h4>Hauptpunkte:</h4>
                             <ul>
                                 <li>Zeitraum: ca. 1600–1720/1750</li>
-                                <li>Ursprung des Begriffs: portugiesisch „barocco" = schief/unregelmäßig (zunächst negativ)</li>
+                                <li>Ursprung des Begriffs: portugiesisch „barocco" = schief/unregelmäßig</li>
                                 <li>Nachfolger der Renaissance, Vorgänger der Aufklärung</li>
                                 <li>Geprägt durch Gegenreformation und Absolutismus</li>
                             </ul>
@@ -239,7 +245,7 @@
                 <!-- BAROCK 2 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">2</div>
                             <div class="theme-title">Geschichtliche Ereignisse und ihr Einfluss auf die Epoche</div>
                         </div>
@@ -269,7 +275,7 @@
                 <!-- BAROCK 3 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">3</div>
                             <div class="theme-title">Das Menschenbild im Barock</div>
                         </div>
@@ -281,7 +287,7 @@
                             <ul>
                                 <li>Mensch als Teil der Schöpfung Gottes, aber sündig und sterblich</li>
                                 <li>Fokus auf Vergänglichkeit (Vanitas), nicht auf Fortschritt</li>
-                                <li>Antithetisches Denken: Spannungen zwischen Gegensätzen (Leben–Tod, Prunk–Vergänglichkeit)</li>
+                                <li>Antithetisches Denken: Spannungen zwischen Gegensätzen</li>
                                 <li>Carpe diem: Genießen trotz Vergänglichkeit</li>
                                 <li>Memento mori: Gedenke, dass du sterben wirst</li>
                             </ul>
@@ -289,8 +295,8 @@
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Das Menschenbild des Barocks ist stark von Religion und Philosophie der Zeit geprägt. Der Mensch wird verstanden als Teil der göttlichen Schöpfung, aber als ein sündhaftes, sterbliches Wesen. Das ist völlig anders als die Renaissance-Ideale, die den Menschen als Maß aller Dinge sahen.</p>
-                            <p>Der zentrale Fokus liegt auf der Vergänglichkeit – auf Vanitas, wie die Lateiner sagten. Das bedeutet: Alles Irdische ist nichtig, alles Weltliche vergeht. Dieser Gedanke durchzieht die gesamte barocke Literatur. Nicht Fortschritt oder Entwicklung sind das Thema, sondern die Tatsache, dass wir sterben. Das mag dunkel klingen, führte aber zu einer eigenartigen Haltung: Wenn alles vergänglich ist, warum nicht den Tag genießen? Das ist die Idee des Carpe diem – lebe den Augenblick.</p>
-                            <p>Aber gleichzeitig mahnt der Barock: Memento mori – denke daran, dass du sterben wirst. Diese beiden Gedanken bilden zusammen das antithetische Lebensgefühl des Barocks: Gegensätze existieren nebeneinander – Leben und Tod, Prunk und Vergänglichkeit, Diesseits und Jenseits. Der Barock-Mensch lebt in dieser permanenten Spannung zwischen Gegensätzen.</p>
+                            <p>Der zentrale Fokus liegt auf der Vergänglichkeit – auf Vanitas. Das bedeutet: Alles Irdische ist nichtig, alles Weltliche vergeht. Dieser Gedanke durchzieht die gesamte barocke Literatur. Nicht Fortschritt oder Entwicklung sind das Thema, sondern die Tatsache, dass wir sterben. Das mag dunkel klingen, führte aber zu einer eigenartigen Haltung: Wenn alles vergänglich ist, warum nicht den Tag genießen? Das ist die Idee des Carpe diem – lebe den Augenblick.</p>
+                            <p>Aber gleichzeitig mahnt der Barock: Memento mori – denke daran, dass du sterben wirst. Diese beiden Gedanken bilden zusammen das antithetische Lebensgefühl des Barocks: Gegensätze existieren nebeneinander – Leben und Tod, Prunk und Vergänglichkeit, Diesseits und Jenseits.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -299,7 +305,7 @@
                 <!-- BAROCK 4 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">4</div>
                             <div class="theme-title">Bevorzugte epochentypische Themen in der barocken Literatur</div>
                         </div>
@@ -312,7 +318,7 @@
                                 <li>Vanitas: Vergänglichkeit aller irdischen Dinge</li>
                                 <li>Memento mori: Erinnerung an die Sterblichkeit</li>
                                 <li>Carpe diem: Lebensgenuss im Angesicht des Todes</li>
-                                <li>Körperliche Vergänglichkeit (besonders Schönheit)</li>
+                                <li>Körperliche Vergänglichkeit, besonders Schönheit</li>
                                 <li>Antithesen und Kontraste als Ausdrucksmittel</li>
                                 <li>Religiöse Standhaftigkeit und Märtyrertum</li>
                             </ul>
@@ -320,8 +326,8 @@
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Wenn man barocke Literatur liest, fallen sofort die wiederkehrenden Themen auf. Das Wichtigste ist die Vanitas – die Vergänglichkeit. Barocke Dichter schreiben ständig darüber, wie Schönheit verblüht, wie Reichtum verschwindet, wie alles Irdische nichtig ist. Das ist nicht pessimistisch gemeint, sondern eher philosophisch: Es ist eine konstante Meditation über die Natur der Wirklichkeit.</p>
-                            <p>Eng damit verknüpft sind zwei gegensätzliche Aufforderungen: Erstens Memento mori – denke an den Tod, lass dich von Demut durchdrungen machen. Das ist eine moralische Mahnung. Gleichzeitig aber Carpe diem – nutze den Tag, genieße, während du noch leben kannst. Diese beiden Gedanken sind nicht widersprüchlich im barocken Denken; sie ergänzen sich. Der Mensch soll sich der Vergänglichkeit bewusst sein und gerade deshalb den Moment nutzen.</p>
-                            <p>Ein sehr beliebtes spezifisches Thema ist die körperliche Vergänglichkeit, besonders die verblühende Schönheit – Dichter wie Hoffmannswaldau schreiben davon, wie die Schönheit einer Frau vergeht und nur die Seele bleibt. Auch religiöse Standhaftigkeit ist wichtig, besonders in Dramen – die Figur des Märtyrers, der nicht vom Glauben abfällt, auch unter Folter. Und überall in der barocken Literatur finden sich Antithesen – bewusste Kontraste, die das Wesen der Dinge zeigen sollen.</p>
+                            <p>Eng damit verknüpft sind zwei gegensätzliche Aufforderungen: Erstens Memento mori – denke an den Tod, lass dich von Demut durchdrungen machen. Das ist eine moralische Mahnung. Gleichzeitig aber Carpe diem – nutze den Tag, genieße, während du noch leben kannst. Diese beiden Gedanken sind nicht widersprüchlich im barocken Denken; sie ergänzen sich.</p>
+                            <p>Ein sehr beliebtes spezifisches Thema ist die körperliche Vergänglichkeit, besonders die verblühende Schönheit. Auch religiöse Standhaftigkeit ist wichtig, besonders in Dramen – die Figur des Märtyrers, der nicht vom Glauben abfällt. Und überall in der barocken Literatur finden sich Antithesen – bewusste Kontraste, die das Wesen der Dinge zeigen sollen.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -330,7 +336,7 @@
                 <!-- BAROCK 5 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">5</div>
                             <div class="theme-title">Das antithetische Lebensgefühl des Barocks</div>
                         </div>
@@ -341,17 +347,17 @@
                             <h4>Hauptpunkte:</h4>
                             <ul>
                                 <li>Antithetik = Spannung zwischen Gegensätzen</li>
-                                <li>Gegensatzpaare: Leben–Tod, Prunk–Vergänglichkeit, Diesseits–Jenseits, Lust–Trauer</li>
+                                <li>Gegensatzpaare: Leben–Tod, Prunk–Vergänglichkeit, Diesseits–Jenseits</li>
                                 <li>Nicht Synthese, sondern Nebeneinander der Gegensätze</li>
-                                <li>Ausdrück durch Antithesen, Kontraste, Paradoxe in Texten</li>
+                                <li>Ausdrückt durch Antithesen, Kontraste, Paradoxe</li>
                                 <li>Widerspiegelt die historische Unsicherheit der Zeit</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Das antithetische Lebensgefühl ist vielleicht das Kernkonzept zum Verständnis des Barocks. Antithetik bedeutet: Spannungen zwischen Gegensätzen. Der barocke Mensch lebt nicht in einer einheitlichen, harmonischen Welt, sondern in einer Welt voller Widersprüche, die nebeneinander existieren.</p>
-                            <p>Das zeigt sich überall: Leben und Tod sind nicht getrennt, sondern vermischt. Prunk und Hoffnung einerseits, Vergänglichkeit und Hoffnungslosigkeit andererseits. Das Diesseits – die irdische Welt mit ihren Vergnügungen – steht dem Jenseits – der Hoffnung auf das Himmelreich – gegenüber. Gleichzeitig gibt es Lust und Trauer, Schönheit und Verfall, Hoffnung und Verzweiflung. Diese Gegensätze werden nicht aufgelöst oder zu einer neuen Einheit synthetisiert; sie bleiben nebeneinander bestehen.</p>
-                            <p>Das ist keine philosophische Schwäche, sondern eine künstlerische Stärke. Barocke Dichter drücken dieses Gefühl durch Antithesen aus – bewusste sprachliche Gegensätze, durch Kontraste in Beschreibungen, durch Paradoxe, die das Denken herausfordern. Die ganze barocke Literatur – Lyrik, Drama, Epik – ist durchdrungen von dieser Technik. Und das widerspiegelt auch die historische Realität: Die Menschen lebten in Unsicherheit, sahen täglich Tod und Zerstörung, aber wollten gleichzeitig leben und genießen.</p>
+                            <p>Das zeigt sich überall: Leben und Tod sind nicht getrennt, sondern vermischt. Prunk und Hoffnung einerseits, Vergänglichkeit andererseits. Das Diesseits – die irdische Welt mit ihren Vergnügungen – steht dem Jenseits – der Hoffnung auf das Himmelreich – gegenüber. Diese Gegensätze werden nicht aufgelöst oder zu einer neuen Einheit synthetisiert; sie bleiben nebeneinander bestehen.</p>
+                            <p>Das ist keine philosophische Schwäche, sondern eine künstlerische Stärke. Barocke Dichter drücken dieses Gefühl durch Antithesen aus – bewusste sprachliche Gegensätze, durch Kontraste in Beschreibungen, durch Paradoxe. Die ganze barocke Literatur ist durchdrungen von dieser Technik. Und das widerspiegelt auch die historische Realität: Die Menschen lebten in Unsicherheit, sahen täglich Tod und Zerstörung, aber wollten gleichzeitig leben und genießen.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -360,9 +366,9 @@
                 <!-- BAROCK 6 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">6</div>
-                            <div class="theme-title">Gattungen im Barock und ihre Wirkungsabsicht</div>
+                            <div class="theme-title">Gattungen im Barock und die Hauptgattung in Abhängigkeit von der Wirkungsabsicht</div>
                         </div>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -371,7 +377,7 @@
                             <h4>Hauptpunkte:</h4>
                             <ul>
                                 <li>Lyrik: Hauptgattung, besonders das Sonett</li>
-                                <li>Sonett ideal zur Darstellung der Antithetik (2 Quartette = These, 2 Terzette = Auflösung)</li>
+                                <li>Sonett ideal zur Darstellung der Antithetik</li>
                                 <li>Epik: Schelmenroman (Picaroroman) als wichtigste Form</li>
                                 <li>Dramatik: Märtyrerdrama, Lust- und Trauerspiele</li>
                                 <li>Wirkungsabsicht: Belehrung, moralische Mahnung, emotionale Erregung (Affektpoetik)</li>
@@ -379,39 +385,9 @@
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
-                            <p>Die Barock-Epoche hat eine klare Hierarchie der Gattungen. Die Lyrik ist die Hauptgattung, und innerhalb der Lyrik ist das Sonett die dominanteste Form. Das ist nicht zufällig: Das Sonett mit seinen 14 Versen und vier Strophen ist praktisch gemacht für das antithetische Denken des Barocks. Die beiden Quartette – die ersten zwei Strophen – stellen eine These oder einen Gegensatz vor, und die beiden Terzette – die letzten zwei Strophen – lösen den Gegensatz auf oder ziehen eine Lehre daraus. Die Form entspricht perfekt der barocken Weltanschauung.</p>
-                            <p>Neben der Lyrik gibt es auch bedeutende Epik. Hier ist der Schelmenroman – auch Picaroroman genannt – die wichtigste Form. Das ist eine episodische Erzählform, in der ein einfältiger oder listiger Held durch verschiedene Stationen und Abenteuer geht, oft als Spiegel der chaotischen Wirklichkeit. Das berühmteste Beispiel ist Grimmelshausens „Simplicissimus", ein Roman über einen naiven Jungen, der während des Dreißigjährigen Krieges verschiedenste Stationen durchlebt.</p>
-                            <p>In der Dramatik entwickelt sich das Märtyrerdrama als eigenständige Form – ein Trauerspiel, in dem eine standhaft gläubige Figur unter Folter nicht von ihrem Glauben abweicht. Andreas Gryphius ist der Meister dieser Gattung. Die Wirkungsabsicht aller dieser Gattungen ist nicht unterhaltsam, sondern belehrend und moralisch. Es geht darum, den Leser oder Zuschauer zu mahnen, zu bewegen, Affekte – Gefühle – auszulösen. Man spricht von Affektpoetik.</p>
-                            <div class="timer">⏱️ ca. 3 Minuten</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BAROCK 7 -->
-                <div class="theme">
-                    <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">7</div>
-                            <div class="theme-title">Bedeutende Autoren und Werke des Barocks</div>
-                        </div>
-                        <div class="toggle-icon">▼</div>
-                    </div>
-                    <div class="theme-body">
-                        <div class="hauptpunkte">
-                            <h4>Hauptpunkte:</h4>
-                            <ul>
-                                <li>Andreas Gryphius (1616–1664): Sonette (Vanitas), Märtyrerdramen (Catharina von Georgien)</li>
-                                <li>Martin Opitz (1597–1639): Buch der deutschen Poeterey – erste deutsche Poetik/Grammatik</li>
-                                <li>Ch. Hoffmannswaldau (1617–1679): Vergänglichkeit der Schönheit</li>
-                                <li>Grimmelshausen (1625–1676): Simplicissimus – Schelmenroman</li>
-                                <li>Johann Helwig: Figurengedicht „Eine Sanduhr"</li>
-                            </ul>
-                        </div>
-                        <div class="monolog">
-                            <h4>3-Minuten-Monolog:</h4>
-                            <p>Die wichtigsten Dichter des Barocks sind ein faszinierendes Ensemble. Beginnen wir mit Andreas Gryphius – ein großer Name, dessen Sonette und Dramen heute noch gelesen werden. Gryphius schreibt eindringliche Sonette über Vanitas, über die Vergänglichkeit der Welt. Noch wichtiger sind vielleicht seine Märtyrerdramen wie „Catharina von Georgien", in denen standhaft gläubige Menschen unter Folter nicht vom Glauben abfallen.</p>
-                            <p>Martin Opitz ist kulturhistorisch vielleicht noch wichtiger als Gryphius. Sein Werk „Buch der deutschen Poeterey" von 1624 ist die erste normierte deutsche Grammatik und Poetik. Das mag trocken klingen, aber es war revolutionär: Vor Opitz gab es keine verbindliche deutsche Schriftsprache, keine einheitliche Grammatik. Opitz schuf diese Grundlagen und ermöglichte damit die deutsche Literatursprache überhaupt.</p>
-                            <p>Christoph Hoffmannswaldau ist bekannt für seine lyrischen Werke über die Vergänglichkeit der Schönheit – wie körperliche Schönheit verblüht, aber die Seele bleibt. Dann gibt es noch Hans Jakob Grimmelshausen, dessen Roman „Der abentheuerliche Simplicissimus Teutsch" das Meisterwerk des barocken Schelmenromans ist – ein großartiges Epos über Krieg, Abenteuer und die menschliche Naivität. Und schließlich Johannes Helwig mit seinem Figurengedicht „Eine Sanduhr", in dem die Form des Textes selbst wie eine Sanduhr aussieht – eine kreative Darstellung von Vanitas.</p>
+                            <p>Die Barock-Epoche hat eine klare Hierarchie der Gattungen. Die Lyrik ist die Hauptgattung, und innerhalb der Lyrik ist das Sonett die dominanteste Form. Das ist nicht zufällig: Das Sonett mit seinen 14 Versen und vier Strophen ist praktisch gemacht für das antithetische Denken des Barocks. Die beiden Quartette – die ersten zwei Strophen – stellen eine These oder einen Gegensatz vor, und die beiden Terzette – die letzten zwei Strophen – lösen den Gegensatz auf oder ziehen eine Lehre daraus.</p>
+                            <p>Neben der Lyrik gibt es auch bedeutende Epik. Hier ist der Schelmenroman – auch Picaroroman genannt – die wichtigste Form. Das ist eine episodische Erzählform, in der ein einfältiger oder listiger Held durch verschiedene Stationen und Abenteuer geht. Das berühmteste Beispiel ist Grimmelshausens „Simplicissimus", ein Roman über einen naiven Jungen, der während des Dreißigjährigen Krieges verschiedenste Stationen durchlebt.</p>
+                            <p>In der Dramatik entwickelt sich das Märtyrerdrama als eigenständige Form – ein Trauerspiel, in dem eine standhaft gläubige Figur unter Folter nicht von ihrem Glauben abweicht. Die Wirkungsabsicht aller dieser Gattungen ist nicht unterhaltsam, sondern belehrend und moralisch. Es geht darum, den Leser oder Zuschauer zu bewegen und emotionale Gefühle auszulösen – man spricht von Affektpoetik.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -420,7 +396,7 @@
                 <!-- BAROCK 8 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">8</div>
                             <div class="theme-title">Der Begriff und die Idee der Vanitas</div>
                         </div>
@@ -432,7 +408,7 @@
                             <ul>
                                 <li>Vanitas = Eitelkeit, Nichtigkeit, Vergänglichkeit</li>
                                 <li>Alle weltlichen Dinge sind nichtig, nur Gott ist ewig</li>
-                                <li>Philosophischer Ursprung: lateinisches Denken, biblische Inspiration (Prediger Salomo)</li>
+                                <li>Philosophischer Ursprung: Biblische Inspiration (Prediger Salomo)</li>
                                 <li>Literarisches Motiv: Ausdrucksmittel für Mahnung und Reflexion</li>
                                 <li>Kunstform: Vanitaskunst mit Schädeln, verwelkten Blumen, Sanduhr-Symbolik</li>
                             </ul>
@@ -441,7 +417,7 @@
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Vanitas ist das Herzstück der barocken Philosophie und Literatur. Das Wort kommt aus dem Lateinischen und bedeutet wörtlich „Eitelkeit" oder „Nichtigkeit". Aber es bedeutet mehr als das: Vanitas ist die Überzeugung, dass alles Weltliche, alles Irdische, vergänglich und letztlich nichtig ist. Nur Gott ist ewig, alles andere vergeht.</p>
                             <p>Diese Idee ist nicht neu – sie hat biblische Wurzeln, besonders im Buch Prediger, wo König Salomo schreibt: „Eitelkeit der Eitelkeiten, alles ist Eitelkeit." Der Barock nimmt diese alte Weisheit auf und macht sie zum Zentrum seiner Weltsicht. Es ist eine ziemlich düstere Philosophie, aber sie führt zu interessanten literarischen und künstlerischen Ergebnissen.</p>
-                            <p>In der Literatur wird Vanitas zu einem Leitmotiv – es taucht überall auf, in Gedichten, Dramen, sogar in der Epik. Der Dichter mahnt den Leser: Denke daran, dass Reichtum vergeht, Schönheit verblüht, Macht flieht, der Tod kommt. In der bildenden Kunst entsteht eine ganze Gattung – die Vanitaskunst. Gemälde zeigen Schädel, verwelkte Blumen, umgestoßene Pokale, Uhren, Sanduhr-Symbole. Alles deutet auf Vergänglichkeit hin. Das ist das barocke Vanitas-Motiv: eine ständige, künstlerische Mahnung an die Nichtigkeit aller irdischen Dinge.</p>
+                            <p>In der Literatur wird Vanitas zu einem Leitmotiv – es taucht überall auf, in Gedichten, Dramen, sogar in der Epik. Der Dichter mahnt den Leser: Denke daran, dass Reichtum vergeht, Schönheit verblüht, Macht flieht, der Tod kommt. In der bildenden Kunst entsteht eine ganze Gattung – die Vanitaskunst. Gemälde zeigen Schädel, verwelkte Blumen, umgestoßene Pokale, Uhren. Alles deutet auf Vergänglichkeit hin.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -450,8 +426,69 @@
                 <!-- BAROCK 9 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">9</div>
+                            <div class="theme-title">Bedeutende Werke im Barock</div>
+                        </div>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="theme-body">
+                        <div class="hauptpunkte">
+                            <h4>Hauptpunkte:</h4>
+                            <ul>
+                                <li>Andreas Gryphius: Sonette (z.B. „Es ist alles eitel"), Märtyrerdramen (Catharina von Georgien)</li>
+                                <li>Martin Opitz: „Buch der deutschen Poeterey" (1624) – erste deutsche Poetik</li>
+                                <li>Ch. Hoffmannswaldau: „Vergänglichkeit der Schönheit" – Liebeslyrik</li>
+                                <li>Hans Jakob Grimmelshausen: „Der abentheuerliche Simplicissimus Teutsch" (1668) – Schelmenroman</li>
+                                <li>Johann Helwig: Figurengedicht „Eine Sanduhr" – Vanitas-Symbol</li>
+                            </ul>
+                        </div>
+                        <div class="monolog">
+                            <h4>3-Minuten-Monolog:</h4>
+                            <p>Die wichtigsten Werke des Barocks repräsentieren die verschiedenen Gattungen und Themen der Epoche. Andreas Gryphius ist einer der großen Namen – seine Sonette über Vanitas wie „Es ist alles eitel" zeigen die Vergänglichkeit in prägnanter Form. Noch wichtiger sind vielleicht seine Märtyrerdramen wie „Catharina von Georgien", in denen standhaft gläubige Menschen unter Folter nicht vom Glauben abfallen.</p>
+                            <p>Martin Opitz' „Buch der deutschen Poeterey" von 1624 ist kulturhistorisch bedeutsam – es ist die erste normierte deutsche Grammatik und Poetik. Das mag trocken klingen, war aber revolutionär: Vor Opitz gab es keine verbindliche deutsche Schriftsprache. Christoph Hoffmannswaldau ist bekannt für seine Lyrik über die Vergänglichkeit der Schönheit – wie körperliche Schönheit verblüht, aber die Seele bleibt.</p>
+                            <p>Dann gibt es Hans Jakob Grimmelshausen, dessen Roman „Der abentheuerliche Simplicissimus Teutsch" das Meisterwerk des barocken Schelmenromans ist – ein großartiges Epos über Krieg, Abenteuer und die menschliche Naivität. Und schließlich Johannes Helwig mit seinem Figurengedicht „Eine Sanduhr", in dem die Form des Textes selbst wie eine Sanduhr aussieht – eine kreative Darstellung von Vanitas.</p>
+                            <div class="timer">⏱️ ca. 3 Minuten</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BAROCK 10 -->
+                <div class="theme">
+                    <div class="theme-header" onclick="toggleTheme(this)">
+                        <div class="header-content">
+                            <div class="theme-number">10</div>
+                            <div class="theme-title">Leitmotive der Barockliteratur</div>
+                        </div>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="theme-body">
+                        <div class="hauptpunkte">
+                            <h4>Hauptpunkte:</h4>
+                            <ul>
+                                <li>Vanitas: Vergänglichkeit, Eitelkeit, Nichtigkeit</li>
+                                <li>Memento mori: Todesgedenken, Demut, Mahnung</li>
+                                <li>Carpe diem: Genießen trotz Vergänglichkeit</li>
+                                <li>Körperliche Vergänglichkeit (verblühende Schönheit, Alter)</li>
+                                <li>Religiöse Standhaftigkeit, Märtyrertum</li>
+                                <li>Krieg, Zerstörung, menschliches Leid</li>
+                            </ul>
+                        </div>
+                        <div class="monolog">
+                            <h4>3-Minuten-Monolog:</h4>
+                            <p>Wenn man barocke Literatur liest, erkennt man schnell, dass es ein paar zentrale Leitmotive gibt, die sich immer wieder auftauchen – wie Leitmotive in einer Symphonie. Das Wichtigste ist die Vanitas, also die Vergänglichkeit. Fast jedes barocke Gedicht oder Drama enthält Reflexionen über die Nichtigkeit aller irdischen Dinge. Nichts bleibt, alles vergeht, nur Gott ist ewig – diese Botschaft wird wieder und wieder vermittelt.</p>
+                            <p>Damit verbunden sind zwei paradoxe Aufforderungen: Memento mori – erinnere dich an den Tod, sei demütig. Das ist eine Mahnung, fast asketisch. Gleichzeitig aber Carpe diem – nutze den Tag, genieße das Leben, während du es noch kannst. Diese beiden Impulse existieren nebeneinander und führen zu einem produktiven inneren Spannungszustand.</p>
+                            <p>Ein spezifisches, sehr beliebtes Motiv ist die körperliche Vergänglichkeit – besonders die Vergänglichkeit von Schönheit und Jugend. Dichter schreiben an Frauen, wie ihre Schönheit verblüht, wie die Haut altert und runzelig wird. Das ist nicht grausam gemeint, sondern eine philosophische Reflexion. Dann gibt es religiöse Themen – die Standhaftigkeit von Märtyrern. Und schließlich: Krieg, Zerstörung und Leid werden dargestellt als Spiegel der Zeit und der menschlichen Lage.</p>
+                            <div class="timer">⏱️ ca. 3 Minuten</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BAROCK 11 -->
+                <div class="theme">
+                    <div class="theme-header" onclick="toggleTheme(this)">
+                        <div class="header-content">
+                            <div class="theme-number">11</div>
                             <div class="theme-title">Barock-Lyrik</div>
                         </div>
                         <div class="toggle-icon">▼</div>
@@ -461,7 +498,7 @@
                             <h4>Hauptpunkte:</h4>
                             <ul>
                                 <li>Sonett: Hauptform, 14 Verse, 2 Quartette + 2 Terzette</li>
-                                <li>Antithetischer Aufbau: These/Antithese → Synthesis/Lehre</li>
+                                <li>Antithetischer Aufbau: These/Antithese → Synthese/Lehre</li>
                                 <li>Figurengedicht (Carmen figuratum): Text bildet Gegenstand ab</li>
                                 <li>Epigramm: Kurzes, pointiertes Gedicht mit Überraschungsschluss</li>
                                 <li>Sprache: Gehoben, rhetorisch, kunstvolle Bildlichkeit</li>
@@ -469,20 +506,20 @@
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
-                            <p>Die barocke Lyrik wird vom Sonett dominiert. Das Sonett ist eine festgelegte Versform mit 14 Versen in vier Strophen: zwei Quartette zu je vier Versen, zwei Terzette zu je drei Versen. Das klingt technisch, aber die Form hat Tiefgang. Die Quartette stellen normalerweise eine These auf oder führen einen Gegensatz ein – zwei Gegensätze reimen sich paarweise, was die Antithetik unterstreicht. Die Terzette dann führen eine Wendung herbei, lösen den Gegensatz auf oder ziehen eine Lehre daraus. Die Form ist wie gemacht für das barocke antithetische Denken.</p>
-                            <p>Neben dem Sonett gibt es das Figurengedicht – auch Carmen figuratum genannt. Hier ist das faszinierende, dass die äußere Form des Gedichtes das darstellt, worüber das Gedicht spricht. Das berühmteste Beispiel ist Johanns Helwigs „Eine Sanduhr": Der Text ist so angeordnet, dass er die Form einer Sanduhr hat. Das ist nicht nur dekorative Spielerei, sondern bedeutungsvoll: Die Form verstärkt die Botschaft des Vanitas-Gedankens.</p>
-                            <p>Dann gibt es noch das Epigramm – ein kurzes, oft nur wenige Verse langes Gedicht, das mit einer Pointe, einem überraschenden oder geistvollen Schluss endet. Im Barock wird das Epigramm verwendet, um schnell und komprimiert eine Wahrheit oder Moral zu vermitteln. Die Sprache aller dieser Formen ist gehoben, rhetorisch durchdacht, mit kunstvollen Bildern und Antithesen durchwoben. Es ist nicht volkstümliche Poesie, sondern Kunstlyrik für ein gebildetes Publikum.</p>
+                            <p>Die barocke Lyrik wird vom Sonett dominiert. Das Sonett ist eine festgelegte Versform mit 14 Versen in vier Strophen: zwei Quartette zu je vier Versen, zwei Terzette zu je drei Versen. Die Quartette stellen normalerweise eine These auf oder führen einen Gegensatz ein – zwei Gegensätze reimen sich paarweise, was die Antithetik unterstreicht. Die Terzette dann führen eine Wendung herbei, lösen den Gegensatz auf oder ziehen eine Lehre daraus. Die Form ist wie gemacht für das barocke antithetische Denken.</p>
+                            <p>Neben dem Sonett gibt es das Figurengedicht – auch Carmen figuratum genannt. Das Faszinierende hier ist, dass die äußere Form des Gedichtes das darstellt, worüber das Gedicht spricht. Das berühmteste Beispiel ist Johanns Helwigs „Eine Sanduhr": Der Text ist so angeordnet, dass er die Form einer Sanduhr hat. Das ist nicht nur dekorative Spielerei, sondern bedeutungsvoll: Die Form verstärkt die Botschaft des Vanitas-Gedankens.</p>
+                            <p>Dann gibt es noch das Epigramm – ein kurzes, oft nur wenige Verse langes Gedicht, das mit einer Pointe, einem überraschenden oder geistvollen Schluss endet. Im Barock wird das Epigramm verwendet, um schnell und komprimiert eine Wahrheit oder Moral zu vermitteln. Die Sprache aller dieser Formen ist gehoben, rhetorisch durchdacht, mit kunstvollen Bildern und Antithesen durchwoben.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- BAROCK 10 -->
+                <!-- BAROCK 12 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">10</div>
-                            <div class="theme-title">Barock-typische Themen in der barocken Literatur</div>
+                        <div class="header-content">
+                            <div class="theme-number">12</div>
+                            <div class="theme-title">Martin Opitz und sein Werk „Buch der deutschen Poeterey"</div>
                         </div>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -490,30 +527,29 @@
                         <div class="hauptpunkte">
                             <h4>Hauptpunkte:</h4>
                             <ul>
-                                <li>Vanitas: Vergänglichkeit, Eitelkeit, Nichtigkeit</li>
-                                <li>Memento mori: Todesgedenken, Demut</li>
-                                <li>Carpe diem: Genießen trotz Vergänglichkeit</li>
-                                <li>Körperliche Vergänglichkeit (verblühende Schönheit, Alter)</li>
-                                <li>Religiöse Standhaftigkeit, Märtyrertum</li>
-                                <li>Krieg, Zerstörung, menschliches Leid</li>
+                                <li>Martin Opitz (1597–1639): Barock-Dichter und Philologe</li>
+                                <li>„Buch der deutschen Poeterey" (1624): erste deutsche Poetik und Grammatik</li>
+                                <li>Ziel: Vereinheitlichung und Normalisierung der deutschen Schriftsprache</li>
+                                <li>Regelwerk für Versmaß, Reim, Strophenbau, Wortschatz</li>
+                                <li>Ermöglicht hochwertige deutsche Literatur</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
-                            <p>Wenn man barocke Literatur liest, erkennt man schnell, dass es ein paar zentrale Themen gibt, die sich immer wieder auftauchen – wie Leitmotive. Das Wichtigste ist die Vanitas, also die Vergänglichkeit. Fast jedes barocke Gedicht oder Drama enthält Reflexionen über die Nichtigkeit aller irdischen Dinge. Nichts bleibt, alles vergeht, nur Gott ist ewig – diese Botschaft wird wieder und wieder vermittelt.</p>
-                            <p>Damit verbunden sind zwei paradoxe Aufforderungen: Memento mori – erinnere dich an den Tod, sei demütig, erkenne deine Nichtigkeit. Das ist eine Mahnung, fast asketisch. Gleichzeitig aber Carpe diem – nutze den Tag, genieße das Leben, während du es noch kannst. Diese beiden Impulse existieren nebeneinander und führen zu einem produktiven inneren Spannungszustand.</p>
-                            <p>Ein spezifisches, sehr beliebtes Thema ist die körperliche Vergänglichkeit – besonders die Vergänglichkeit von Schönheit und Jugend. Dichter wie Hoffmannswaldau schreiben an Frauen, wie ihre Schönheit verblüht, wie die Haut altert und runzelig wird. Das ist nicht grausam gemeint, sondern eine philosophische Reflexion: Die körperliche Form ist nicht das Wesentliche, die Seele bleibt. Dann gibt es religiöse Themen – die Standhaftigkeit von Märtyrern, die Treue zum Glauben. Und schließlich: Krieg, Zerstörung und Leid werden dargestellt, besonders im Schelmenroman, als Spiegel der Zeit und der menschlichen Lage.</p>
+                            <p>Martin Opitz ist eine der Schlüsselfiguren nicht nur des Barocks, sondern der gesamten deutschsprachigen Literaturgeschichte. Er lebte von 1597 bis 1639 und war nicht nur ein großartiger Dichter, sondern auch ein Theoretiker und Philologe – jemand, der sich systematisch mit Sprache befasste.</p>
+                            <p>Sein Hauptwerk ist das „Buch der deutschen Poeterey" von 1624. Das Werk ist praktisch ein Regelwerk – es legt fest, wie deutsche Poesie aussehen sollte. Opitz beschreibt Regeln für das Versmaß – wie Silben zu betonen sind, wie Jamben und Trochäen funktionieren. Er erklärt Reimschemas, wie man Strophen baut, welche Wörter man verwenden sollte. Das alles klingt trocken, aber es war revolutionär.</p>
+                            <p>Die Bedeutung von Opitz kann man kaum überschätzen. Indem er diese Regeln aufschrieb, machte er die deutsche Sprache „regierbar" – Dichter konnten sich danach richten, wussten, was „richtig" war. Das ermöglichte eine schnelle Entwicklung von hochwertiger deutscher Literatur. Ohne Opitz hätte das Deutsche vielleicht noch lange unter dem Lateinischen und Französischen gelitten. Stattdessen wurde es durch Opitz' Werk zu einer vollwertigen Literatursprache. Man kann sagen: Opitz hat die deutsche Sprache modern gemacht.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- BAROCK 11 -->
+                <!-- BAROCK 13 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">11</div>
-                            <div class="theme-title">Sprachgesellschaften und Sprachpflege</div>
+                        <div class="header-content">
+                            <div class="theme-number">13</div>
+                            <div class="theme-title">Die Sprachgesellschaften</div>
                         </div>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -532,48 +568,18 @@
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Ein faszinierendes Aspekt der Barock-Epoche ist die sprachliche Situation. Im frühen Barock gab es noch keine einheitliche deutsche Schriftsprache und auch keine verbindliche Grammatik. Das mag überraschend klingen, aber es bedeutete, dass Schreiber und Dichter ziemlich frei in ihrer Schreibweise waren – zu frei, wie viele meinten. Das führte zu großer Verwirrung und Uneinheitlichkeit.</p>
                             <p>Die Lösung kam durch Sprachgesellschaften. Im 17. Jahrhundert entstanden Organisationen, die sich zum Ziel setzten, die deutsche Sprache zu vereinheitlichen, zu reinigen und zu veredeln. Die prominenteste war die Fruchtbringende Gesellschaft, auch die Palmengesellschaft genannt. Diese Gesellschaften arbeiteten gegen Fremdwörter – besonders gegen Französisch und Latein –, weil man wollte, dass das Deutsche als eigenständige, gepflegte Kultursprache anerkannt wurde.</p>
-                            <p>Martin Opitz spielte hier eine Schlüsselrolle. Sein Werk „Buch der deutschen Poeterey" von 1624 war praktisch das erste Regelwerk für die deutsche Sprache und Dichtung. Es etablierte Regeln für Grammatik, Metrik, Reimschemas und Wortschatz. Das war enorm wichtig: Opitz machte die deutsche Sprache „regierbar", er gab ihr eine Struktur, auf der nachfolgende Dichter aufbauen konnten. Ohne Opitz und die Sprachgesellschaften hätte sich das Deutsche vielleicht nicht so schnell zu einer literarischen Hochsprache entwickelt.</p>
+                            <p>Martin Opitz spielte hier eine Schlüsselrolle. Sein Werk „Buch der deutschen Poeterey" von 1624 war praktisch das erste Regelwerk für die deutsche Sprache und Dichtung. Das war enorm wichtig: Opitz machte die deutsche Sprache „regierbar", er gab ihr eine Struktur, auf der nachfolgende Dichter aufbauen konnten. Ohne Opitz und die Sprachgesellschaften hätte sich das Deutsche vielleicht nicht so schnell zu einer literarischen Hochsprache entwickelt.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- BAROCK 12 -->
+                <!-- BAROCK 14 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">12</div>
-                            <div class="theme-title">Martin Opitz und das „Buch der deutschen Poeterey"</div>
-                        </div>
-                        <div class="toggle-icon">▼</div>
-                    </div>
-                    <div class="theme-body">
-                        <div class="hauptpunkte">
-                            <h4>Hauptpunkte:</h4>
-                            <ul>
-                                <li>Martin Opitz (1597–1639): Barock-Dichter und Philologe</li>
-                                <li>„Buch der deutschen Poeterey" (1624): erste deutsche Poetik und Grammatik</li>
-                                <li>Ziel: Vereinheitlichung und Normalisierung der deutschen Schriftsprache</li>
-                                <li>Regelwerk für Versmaß, Reim, Strophenbau, Wortschatz</li>
-                                <li>Ermöglicht hochwertige deutsche Literatur</li>
-                            </ul>
-                        </div>
-                        <div class="monolog">
-                            <h4>3-Minuten-Monolog:</h4>
-                            <p>Martin Opitz ist eine der Schlüsselfiguren nicht nur des Barocks, sondern der gesamten deutschsprachigen Literaturgeschichte. Er lebte von 1597 bis 1639 und war nicht nur ein großartiger Dichter, sondern auch ein Theoretiker und Philologe – jemand, der sich systematisch mit Sprache befasste.</p>
-                            <p>Sein Hauptwerk ist das „Buch der deutschen Poeterey" von 1624. Das Wort „Poeterey" ist veraltet, bedeutet aber einfach „Dichtkunst". Das Werk ist praktisch ein Regelwerk – es legt fest, wie Deutsche Poesie aussehen sollte. Opitz beschreibt Regeln für das Versmaß – wie Silben zu betonen sind, wie Jamben und Trochäen funktionieren. Er erklärt Reimschemas, wie man Strophen baut, welche Wörter man verwenden sollte. Das alles klingt trocken, aber es war revolutionär.</p>
-                            <p>Die Bedeutung von Opitz kann man kaum überschätzen. Indem er diese Regeln aufschrieb, machte er die deutsche Sprache „regierbar" – Dichter konnten sich danach richten, wussten, was „richtig" war. Das ermöglichte eine schnelle Entwicklung von hochwertiger deutscher Literatur. Ohne Opitz hätte das Deutsche vielleicht noch lange als Sprache der hohen Kultur unter dem Lateinischen und Französischen gelitten. Stattdessen wurde es durch Opitz' Werk zu einer vollwertigen Literatursprache. Man kann sagen: Opitz hat die deutsche Sprache modern gemacht.</p>
-                            <div class="timer">⏱️ ca. 3 Minuten</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BAROCK 13 -->
-                <div class="theme">
-                    <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">13</div>
-                            <div class="theme-title">Das Sonett und das Epigramm</div>
+                        <div class="header-content">
+                            <div class="theme-number">14</div>
+                            <div class="theme-title">Sonett und Epigramm</div>
                         </div>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -582,7 +588,7 @@
                             <h4>Hauptpunkte (Sonett):</h4>
                             <ul>
                                 <li>Struktur: 14 Verse in 4 Strophen (2 Quartette à 4 Verse, 2 Terzette à 3 Verse)</li>
-                                <li>Reimschema: Quartette meist ABAB oder ABBA, Terzette variabel</li>
+                                <li>Reimschema: Quartette meist ABAB oder ABBA</li>
                                 <li>Funktion: These (Quartette) → Antithese → Synthese/Lehre (Terzette)</li>
                                 <li>Metrum: Alexandriner (6-hebiger Jambus mit Zäsur)</li>
                             </ul>
@@ -595,19 +601,19 @@
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
-                            <p>Das Sonett ist die Königin der barocken Lyrik. Es ist eine festgelegte Form mit 14 Versen, aufgeteilt in vier Strophen: zuerst zwei Quartette – das sind Strophen mit je vier Versen – dann zwei Terzette mit je drei Versen. Die Reimschema variieren, aber typischerweise verwenden die Quartette ein Umarmender Reimschema, also ABBA, was unterstreicht, dass man zwei verschiedene Gedanken hat, die umrahmt werden. Die Terzette können unterschiedlich reimt sein.</p>
-                            <p>Das Großartige am Sonett ist seine innere Logik. Die beiden Quartette präsentieren normalerweise zwei Perspektiven auf ein Problem – eine These und eine Antithese. Sie sind wie zwei geschlossene Gedanken-Blöcke. Dann kommt ein Wendepunkt – die Terzette bringen eine Synthese oder eine Lehre, sie lösen den Gegensatz auf oder zeigen, dass beide Seiten gleichzeitig wahr sind. Das ist wie gemacht für das barocke antithetische Denken. Metrisch wird das Sonett oft im Alexandriner geschrieben, das ist ein sechs-hebiger Jambus mit einer Zäsur – also einer Pause – in der Mitte, was wiederum die Zweiteiligkeit unterstreicht.</p>
-                            <p>Das Epigramm ist eine ganz andere Form – viel kürzer und verdichteter. Es kann nur wenige Verse lang sein, und sein Zweck ist eine schnelle, komprimierte Aussage mit einer Pointe am Ende – einem überraschenden oder geistvollen Schluss. Im Barock wird das Epigramm verwendet, um schnell und elegant eine moralische Wahrheit zu vermitteln. Beide Formen, Sonett und Epigramm, zeigen, wie der Barock künstlerische Form nutzt, um philosophische Gedanken auszudrücken.</p>
+                            <p>Das Sonett ist die Königin der barocken Lyrik. Es ist eine festgelegte Form mit 14 Versen, aufgeteilt in vier Strophen: zuerst zwei Quartette – das sind Strophen mit je vier Versen – dann zwei Terzette mit je drei Versen. Die Reimschema variieren, aber typischerweise verwenden die Quartette ein Umarmender Reimschema, also ABBA, was unterstreicht, dass man zwei verschiedene Gedanken hat, die umrahmt werden.</p>
+                            <p>Das Großartige am Sonett ist seine innere Logik. Die beiden Quartette präsentieren normalerweise zwei Perspektiven auf ein Problem – eine These und eine Antithese. Sie sind wie zwei geschlossene Gedanken-Blöcke. Dann kommt ein Wendepunkt – die Terzette bringen eine Synthese oder eine Lehre, sie lösen den Gegensatz auf oder zeigen, dass beide Seiten gleichzeitig wahr sind. Das ist wie gemacht für das barocke antithetische Denken. Metrisch wird das Sonett oft im Alexandriner geschrieben, das ist ein sechs-hebiger Jambus mit einer Zäsur – also einer Pause – in der Mitte.</p>
+                            <p>Das Epigramm ist eine ganz andere Form – viel kürzer und verdichteter. Es kann nur wenige Verse lang sein, und sein Zweck ist eine schnelle, komprimierte Aussage mit einer Pointe am Ende – einem überraschenden oder geistvollen Schluss. Im Barock wird das Epigramm verwendet, um schnell und elegant eine moralische Wahrheit zu vermitteln. Beide Formen zeigen, wie der Barock künstlerische Form nutzt, um philosophische Gedanken auszudrücken.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- BAROCK 14 -->
+                <!-- BAROCK 15 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">14</div>
+                        <div class="header-content">
+                            <div class="theme-number">15</div>
                             <div class="theme-title">Etymologische Definition des Begriffes Barock</div>
                         </div>
                         <div class="toggle-icon">▼</div>
@@ -624,7 +630,7 @@
                             </ul>
                         </div>
                         <div class="monolog">
-                            <h4>3-Minolog:</h4>
+                            <h4>3-Minuten-Monolog:</h4>
                             <p>Das Wort „Barock" hat eine interessante Geschichte. Es kommt aus dem Portugiesischen – vom portugiesischen Wort „barocco". Dieses Wort bedeutet wörtlich „schief", „unregelmäßig" oder „verzerrt". Im Grunde ist es ein abwertender Begriff – er drückt aus, dass etwas nicht proportional, nicht harmonisch, sondern krumm und verdreht ist.</p>
                             <p>Das ist die Ironie: Der Name dieser Kunstepoche war von Anfang an kritisch gemeint. Die Renaissance-Menschen und später die Klassizisten des 18. Jahrhunderts – besonders französische Kritiker – verwendeten das Wort „Barock" abwertend, um die Kunstformen des 17. Jahrhunderts als unregelmäßig, chaotisch und geschmacklos zu beschreiben. Sie meinten, das alles sei zu verziert, zu emotional, zu leidenschaftlich im Vergleich zu den harmonischen Idealen der Renaissance oder der Klassik.</p>
                             <p>Aber das Interessante ist: Trotz dieser kritischen Etymologie ist der Name geblieben. Heute verwenden wir „Barock" als neutrale oder sogar bewundernde Bezeichnung für diese Epoche. Die „Unregelmäßigkeit" und „Verzerrung", die das Wort ursprünglich kritisierte, sehen wir heute als künstlerische Stärke – als Ausdruck von Leidenschaft, Emotionalität und innerer Spannung. Der Name, der als Beleidigung gedacht war, ist zum stolzen Label geworden.</p>
@@ -633,12 +639,12 @@
                     </div>
                 </div>
 
-                <!-- BAROCK 15 -->
+                <!-- BAROCK 16 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">15</div>
-                            <div class="theme-title">Die Wissenschaft im 17. Jahrhundert</div>
+                        <div class="header-content">
+                            <div class="theme-number">16</div>
+                            <div class="theme-title">Die Wissenschaft im 17. Jahrhundert (Galileo Galilei)</div>
                         </div>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -649,7 +655,7 @@
                                 <li>Parallelentwicklung: Wissenschaft einerseits, religiöser Fanatismus andererseits</li>
                                 <li>Galileo Galilei: Heliozentrisches Weltbild vs. Kirchenlehre</li>
                                 <li>Konflikt: Empirische Naturwissenschaft vs. religiöse Dogmen</li>
-                                <li>Folge: Unterdrückung von Wissenschaftlern durch die Kirche (z.B. Galileis Hausarrest)</li>
+                                <li>Folge: Unterdrückung von Wissenschaftlern durch die Kirche</li>
                                 <li>Gegensatz: Aufklärung wird die Reaktion auf diese Repression</li>
                             </ul>
                         </div>
@@ -663,11 +669,11 @@
                     </div>
                 </div>
 
-                <!-- BAROCK 16 -->
+                <!-- BAROCK 17 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">16</div>
+                        <div class="header-content">
+                            <div class="theme-number">17</div>
                             <div class="theme-title">Der Hexenwahn im 17. Jahrhundert</div>
                         </div>
                         <div class="toggle-icon">▼</div>
@@ -694,12 +700,12 @@
                     </div>
                 </div>
 
-                <!-- BAROCK 17 -->
+                <!-- BAROCK 18 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">17</div>
-                            <div class="theme-title">Das Emblem im Barock</div>
+                        <div class="header-content">
+                            <div class="theme-number">18</div>
+                            <div class="theme-title">Emblematik: Das Emblem im Barock</div>
                         </div>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -710,7 +716,7 @@
                                 <li>Struktur: Dreiteiliges Kunstwerk</li>
                                 <li>Teil 1 – Inscriptio: Überschrift, Motto (lateinisch)</li>
                                 <li>Teil 2 – Pictura: Bild (Stich, Gravur)</li>
-                                <li>Teil 3 – Subscriptio: Erklärender Untertitel (lateinisch oder deutsch)</li>
+                                <li>Teil 3 – Subscriptio: Erklärender Untertitel</li>
                                 <li>Funktion: Bild und Text ergänzen sich zur Gesamtaussage</li>
                                 <li>Thema: Oft Vanitas, moralische Belehrung, Allegorie</li>
                             </ul>
@@ -719,37 +725,7 @@
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Das Emblem ist eine barocke Kunstform, die heute etwas in Vergessenheit geraten ist, aber im 17. Jahrhundert sehr beliebt war. Ein Emblem ist ein dreiteiliges Kunstwerk, das Bild und Text kombiniert – eine frühe Form von dem, was wir heute „Infografik" nennen würden.</p>
                             <p>Die drei Teile sind: Erstens die Inscriptio – das ist eine Überschrift oder ein Motto, meistens auf Lateinisch. Dann kommt die Pictura – das ist das Bild selbst, meist ein Stich oder eine Gravur. Und drittens die Subscriptio – ein erklärende Untertitel, oft auf Deutsch oder Lateinisch. Diese drei Elemente arbeiten zusammen, um eine Aussage zu vermitteln.</p>
-                            <p>Ein konkretes Beispiel: Ein Emblem könnte die Inscriptio „Ex Maximo Minimum" (Aus dem Größten das Kleinste) haben. Die Pictura zeigt dann einen menschlichen Schädel mit Knochen und verwelktem Pflanzenbewuchs – ein Vanitas-Symbol. Die Subscriptio erklärt: „Der Mensch war Ebenbild Gottes – nun nur noch ein leerer Schädel. Der Verstand macht den Menschen zum Heiligtum; ohne ihn ist er nichts." Durch die Kombination von Bild, Motto und Erklärung wird eine moralische oder philosophische Wahrheit vermittelt. Das Emblem ist charakteristisch für den Barock, weil es antithetisch denkt – die Größe des Menschen vs. die Niedrigkeit der Vergänglichkeit.</p>
-                            <div class="timer">⏱️ ca. 3 Minuten</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BAROCK 18 -->
-                <div class="theme">
-                    <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">18</div>
-                            <div class="theme-title">Das Figurengedicht (Carmen figuratum)</div>
-                        </div>
-                        <div class="toggle-icon">▼</div>
-                    </div>
-                    <div class="theme-body">
-                        <div class="hauptpunkte">
-                            <h4>Hauptpunkte:</h4>
-                            <ul>
-                                <li>Definition: Text bildet optisch die Form eines Gegenstands/Symbols ab</li>
-                                <li>Beispiel: „Eine Sanduhr" von Johann Helwig – Text in Sanduhr-Form</li>
-                                <li>Wirkung: Visuelle Ebene verstärkt und unterstreicht die literarische Aussage</li>
-                                <li>Bedeutung: Barocke Synthese von visueller und sprachlicher Kunst</li>
-                                <li>Beispiel-Symbolik: Sanduhr = Vanitas, Vergänglichkeit</li>
-                            </ul>
-                        </div>
-                        <div class="monolog">
-                            <h4>3-Minuten-Monolog:</h4>
-                            <p>Das Figurengedicht – auch Carmen figuratum genannt – ist eine besonders kreative barocke Form. Die Idee ist faszinierend: Der Text eines Gedichts wird so angeordnet, dass er optisch die Form des Gegenstandes darstellt, über den das Gedicht spricht. Es ist Text als bildende Kunst.</p>
-                            <p>Das berühmteste Beispiel ist Johann Helwigs „Eine Sanduhr" aus dem frühen 17. Jahrhundert. Der Text ist nicht in normalen Zeilen angeordnet, sondern so geformt, dass die Anordnung wie eine Sanduhr aussieht – breit oben, eng in der Mitte, breit unten wieder. Der Text läuft einfach nicht von links nach rechts, sondern folgt der Kontur einer Sanduhr. Das ist nicht nur spielerisch, sondern bedeutungsvoll: Die Sanduhr symbolisiert Vergänglichkeit und Vanitas – die Zeit läuft ab. Die visuelle Form unterstreicht die philosophische Aussage des Textes.</p>
-                            <p>Das Figurengedicht ist charakteristisch für den Barock, weil es zeigt, wie die Epoche verschiedene Künste synthetisiert. Ein Gedicht ist nicht nur Sprache, sondern auch Bild. Die Grenze zwischen Literatur und bildender Kunst wird bewusst durchbrochen. Für einen heutigen Leser mag das merkwürdig aussehen – wozu die komplizierte Form, wenn es einfacher auf normale Art geschrieben werden könnte? Aber im Barock ist genau das der Punkt: Die Schwierigkeit, der künstlerische Aufwand, die Verbindung von Form und Inhalt – das macht das Werk kostbar und bedeutungsvoll.</p>
+                            <p>Ein konkretes Beispiel: Ein Emblem könnte die Inscriptio „Ex Maximo Minimum" (Aus dem Größten das Kleinste) haben. Die Pictura zeigt dann einen menschlichen Schädel mit Knochen und verwelktem Pflanzenbewuchs – ein Vanitas-Symbol. Die Subscriptio erklärt: „Der Mensch war Ebenbild Gottes – nun nur noch ein leerer Schädel. Der Verstand macht den Menschen zum Heiligtum; ohne ihn ist er nichts." Durch die Kombination von Bild, Motto und Erklärung wird eine moralische oder philosophische Wahrheit vermittelt. Das Emblem ist charakteristisch für den Barock, weil es antithetisch denkt.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -758,7 +734,7 @@
                 <!-- BAROCK 19 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">19</div>
                             <div class="theme-title">Martin Opitz, der Lyriker: Der Petrarkismus</div>
                         </div>
@@ -770,7 +746,7 @@
                             <ul>
                                 <li>Petrarkismus: Literarische Strömung, nachahmend des italienischen Dichters Petrarca</li>
                                 <li>Charakteristika: Idealisierte Liebeslyrik, unerreichbare Frau als Ideal</li>
-                                <li>Motive: Antithesen zwischen Liebesschmerz und Bewunderung, Leid und Seligkeit</li>
+                                <li>Motive: Antithesen zwischen Liebesschmerz und Bewunderung</li>
                                 <li>Martin Opitz: Übertrug Petrarkismus ins Deutsche</li>
                                 <li>Form: Oft Sonette, die petrarkistisches Denken ausdrücken</li>
                                 <li>Funktion: Sublimierung des Liebessehns in Kunstform</li>
@@ -779,8 +755,8 @@
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Petrarkismus ist eine Liebesdichtungs-Strömung, die ihren Namen vom italienischen Dichter Petrarca hat, der im 14. Jahrhundert lebte. Petrarca schrieb leidenschaftliche Sonette an eine unerreichbare, idealisierte Frau – seine Laura. Diese Gedichte wurden im Renaissance Europa berühmt und nahezu kultartig verehrt.</p>
-                            <p>Der Petrarkismus ist charakterisiert durch idealisierende Liebeslyrik. Die Frau wird nicht als reale, flaws-hafte Person dargestellt, sondern als quasi-göttliches Ideal – schön, tugendhaft, unerreichbar. Der Liebende leidet unter dieser Unerreichbarkeit. Die Lyrik drückt diese paradoxe Konstellation aus: Süße Leiden, glückliche Trauer, Hoffnung und Hoffnungslosigkeit gleichzeitig. Es gibt ständige Antithesen – zwischen der Kälte der Geliebten und der Hitze der Liebe, zwischen Hoffnung und Verzweiflung.</p>
-                            <p>Martin Opitz übernahm diese Tradition und übertrug sie ins Deutsche. Er schrieb Sonette im petrarkistischen Stil, die zeigen, wie deutsche Dichtung europäisches Niveau erreichen konnte. Der Petrarkismus bleibt während des ganzen Barocks einflussreich – nicht nur in der Liebeslyrik, sondern auch in der allgemeinen Sensibilität für subtile emotionale Zustände und künstlerische Sublimierung. Das Liebesleid wird nicht vulgär ausgedrückt, sondern raffiniert in Sonett-Form umgewandelt – das ist barocke Kunstfertigkeit.</p>
+                            <p>Der Petrarkismus ist charakterisiert durch idealisierende Liebeslyrik. Die Frau wird nicht als reale, fehlerhafte Person dargestellt, sondern als quasi-göttliches Ideal – schön, tugendhaft, unerreichbar. Der Liebende leidet unter dieser Unerreichbarkeit. Die Lyrik drückt diese paradoxe Konstellation aus: Süße Leiden, glückliche Trauer, Hoffnung und Hoffnungslosigkeit gleichzeitig. Es gibt ständige Antithesen – zwischen der Kälte der Geliebten und der Hitze der Liebe, zwischen Hoffnung und Verzweiflung.</p>
+                            <p>Martin Opitz übernahm diese Tradition und übertrug sie ins Deutsche. Er schrieb Sonette im petrarkistischen Stil, die zeigen, wie deutsche Dichtung europäisches Niveau erreichen konnte. Der Petrarkismus bleibt während des ganzen Barocks einflussreich – nicht nur in der Liebeslyrik, sondern auch in der allgemeinen Sensibilität für subtile emotionale Zustände und künstlerische Sublimierung. Das Liebesleid wird nicht vulgär ausgedrückt, sondern raffiniert in Sonett-Form umgewandelt.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -794,7 +770,7 @@
                 <!-- AUFKLÄRUNG 1 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">1</div>
                             <div class="theme-title">Was ist Aufklärung? Definition nach I. Kant</div>
                         </div>
@@ -804,18 +780,18 @@
                         <div class="hauptpunkte">
                             <h4>Hauptpunkte:</h4>
                             <ul>
-                                <li>Kant-Definition: „Aufklärung ist der Ausgang des Menschen aus seiner selbst verschuldeten Unmündigkeit"</li>
+                                <li>Kant: „Aufklärung ist der Ausgang des Menschen aus seiner selbst verschuldeten Unmündigkeit"</li>
                                 <li>Unmündigkeit = Unfähigkeit, ohne Anleitung fremder zu denken</li>
-                                <li>Sapere aude: „Wage es, zu wissen" – Kants Wahlspruch</li>
+                                <li>Sapere aude: „Wage es zu wissen"</li>
                                 <li>Mut-Aphorismus: „Habe Mut, dich deines Verstandes zu bedienen!"</li>
-                                <li>Kernidee: Mensch muss Vernunft autonom gebrauchen, nicht blind glauben</li>
+                                <li>Kernidee: Mensch muss Vernunft autonom gebrauchen</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Wenn man über Aufklärung spricht, muss man mit Immanuel Kant beginnen. Kant hat die wahrscheinlich beste Definition hinterlassen, was Aufklärung überhaupt ist. Er schrieb: „Aufklärung ist der Ausgang des Menschen aus seiner selbst verschuldeten Unmündigkeit." Das klingt zunächst etwas sperrig, aber es ist genial durchdacht.</p>
                             <p>Was bedeutet das? Unmündigkeit bedeutet für Kant nicht, dass man dumm ist, sondern dass man nicht fähig ist – oder nicht fähig sein will – den eigenen Verstand ohne die Anleitung anderer zu gebrauchen. Ein unmündiger Mensch verlässt sich auf andere, um zu wissen, was er denken soll. Er ist faul, feige und bequem, wie Kant sagt – es ist einfacher, anderen das Denken zu überlassen. Die Aufklärung fordert dagegen: Das müssen wir überwinden. Jeder Mensch muss seinen Verstand selbst nutzen.</p>
-                            <p>Kants Wahlspruch ist „Sapere aude" – das ist Lateinisch und bedeutet „Wage es zu wissen" oder „Trau dich, dich selbst Gedanken zu machen". Das wird zusammengefasst in seinem berühmten Aphorismus: „Habe Mut, dich deines eigenen Verstandes zu bedienen!" Das ist die Kernforderung der Aufklärung. Du hast einen Verstand – nutze ihn. Denke selbst, stelle Fragen, vertraue nicht blind auf Autoritäten, ob Kirche oder Staat. Das ist radikal, und es ist revolutionär. Die Aufklärung verändert die Gesellschaft fundamental.</p>
+                            <p>Kants Wahlspruch ist „Sapere aude" – das ist Lateinisch und bedeutet „Wage es zu wissen" oder „Trau dich, dich selbst Gedanken zu machen". Das wird zusammengefasst in seinem berühmten Aphorismus: „Habe Mut, dich deines eigenen Verstandes zu bedienen!" Das ist die Kernforderung der Aufklärung. Du hast einen Verstand – nutze ihn. Denke selbst, stelle Fragen, vertraue nicht blind auf Autoritäten. Das ist radikal und revolutionär.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -824,7 +800,7 @@
                 <!-- AUFKLÄRUNG 2 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">2</div>
                             <div class="theme-title">Die Aufklärung als europäische Epoche</div>
                         </div>
@@ -839,15 +815,14 @@
                                 <li>Deutschland: Aufklärung (Kant, Lessing)</li>
                                 <li>Frankreich: Siècle des lumières (Voltaire, Rousseau)</li>
                                 <li>England: Enlightenment (Locke, Hume)</li>
-                                <li>Philosophische Basis: Rationalismus (Descartes: „Cogito ergo sum")</li>
-                                <li>Gesellschaftliche Auswirkung: Aufstieg des Bildungsbürgertums</li>
+                                <li>Philosophische Basis: Rationalismus (Descartes)</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Die Aufklärung ist keine deutsche oder französische Bewegung – es ist eine europäische Epoche. Das 18. Jahrhundert wird überall in Europa von ähnlichen Ideen geprägt: Vernunft, Toleranz, Bildung und der Glaube, dass der Mensch durch eigenes Denken die Welt verbessern kann.</p>
                             <p>In verschiedenen Ländern hat die Aufklärung unterschiedliche Namen. In Deutschland nennt man sie einfach die „Aufklärung". In Frankreich heißt sie „Siècle des lumières" – das Jahrhundert der Lichter – ein poetischer Name. In England nennt man sie „Enlightenment" – Erleuchtung. Die Metaphorik ist interessant: Überall wird Licht als Metapher für Verstand und Wissen verwendet. Das Licht der Vernunft bricht die Dunkelheit der Unwissenheit.</p>
-                            <p>Jedes Land hat seine Vertreter. In Deutschland sind es Immanuel Kant und Gotthold Ephraim Lessing. In Frankreich sind es Voltaire und Jean-Jacques Rousseau – kritische Geister, die Religion und absolute Herrschaft in Frage stellen. In England John Locke und David Hume, die den Empirismus entwickeln. Die philosophische Grundlage für alle ist der Rationalismus – die Überzeugung, dass Vernunft die Grundlage aller Wahrheit ist. Descartes' berühmter Satz „Cogito ergo sum" (Ich denke, also bin ich) wird zur Grundformel: Nur durch Denken kann ich meiner Existenz sicher sein. Gesellschaftlich führt das zum Aufstieg des gebildeten Bürgertums – Menschen, die durch Bildung und Verstand Macht gewinnen, nicht durch Geburt oder Grundbesitz.</p>
+                            <p>Jedes Land hat seine Vertreter. In Deutschland sind es Immanuel Kant und Gotthold Ephraim Lessing. In Frankreich sind es Voltaire und Jean-Jacques Rousseau – kritische Geister, die Religion und absolute Herrschaft in Frage stellen. In England John Locke und David Hume, die den Empirismus entwickeln. Die philosophische Grundlage für alle ist der Rationalismus – die Überzeugung, dass Vernunft die Grundlage aller Wahrheit ist. Descartes' berühmter Satz „Cogito ergo sum" wird zur Grundformel: Nur durch Denken kann ich meiner Existenz sicher sein.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -856,9 +831,9 @@
                 <!-- AUFKLÄRUNG 3 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">3</div>
-                            <div class="theme-title">Gotthold Ephraim Lessing und die Aufklärung</div>
+                            <div class="theme-title">G.E. Lessing und die Aufklärung</div>
                         </div>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -871,15 +846,14 @@
                                 <li>Karriere: Bibliothekar beim Braunschweigischen Hof (1756–1771)</li>
                                 <li>Schreibverbot 1778: Streit mit evangelischem Pfarrer wegen Religionskritik</li>
                                 <li>Nathan der Weise (1779): Glaubensbekenntnis und Antwort auf Zensur</li>
-                                <li>Tod: 15. Februar 1781</li>
-                                <li>Bedeutung: Verkörperung des aufgeklärten Geistes in Deutschland</li>
+                                <li>Bedeutung: Verkörperung des aufgeklärten Geistes</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Gotthold Ephraim Lessing ist die zentrale Figur der deutschen Aufklärung. Er lebte von 1729 bis 1781 und war nicht nur Dichter und Dramatiker, sondern auch ein großartiger Kritiker und Denker. Als Sohn eines evangelischen Pfarrers wuchs Lessing in einem religiösen Umfeld auf, aber er entwickelte sich zu einem unabhängigen, kritischen Geist.</p>
                             <p>Seine Karriere war interessant: Nach seiner Ausbildung an der Fürstenschule St. Afra in Meißen arbeitete er zunächst als Rezensent und Kritiker in Berlin. 1756 wurde er Bibliothekar beim Braunschweigischen Herzog – eine Position mit Ausstrahlung und Einfluss. Aber dann kam 1778 ein Bruch. Lessing veröffentlichte religiöse Texte, die die kirchliche Orthodoxie kritisierten. Ein evangelischer Pfarrer namens Goeze attackierte ihn öffentlich. Die Folge war, dass Lessing ein Schreibverbot erhielt – die Obrigkeit verbot ihm, weiter zu schreiben.</p>
-                            <p>Aber gerade wegen dieses Schreibverbots entstand sein Meisterwerk: „Nathan der Weise". Lessing konnte nicht mehr journalistisch schreiben, also griff er zur Literatur – zum Drama. Das Stück ist sein Glaubensbekenntnis und seine Antwort auf die Zensur. Es ist sein Vermächtnis: ein Werk, das Religionstoleranz, Vernunft und Humanität feiert. Lessing starb 1781, kurz nach dem Erfolg von Nathan. Er ist das Gesicht der aufgeklärten Vernunft im deutschsprachigen Raum – mutig, kritisch, humanistisch.</p>
+                            <p>Aber gerade wegen dieses Schreibverbots entstand sein Meisterwerk: „Nathan der Weise". Lessing konnte nicht mehr journalistisch schreiben, also griff er zur Literatur – zum Drama. Das Stück ist sein Glaubensbekenntnis und seine Antwort auf die Zensur. Es ist sein Vermächtnis: ein Werk, das Religionstoleranz, Vernunft und Humanität feiert. Lessing starb 1781, kurz nach dem Erfolg von Nathan. Er ist das Gesicht der aufgeklärten Vernunft im deutschsprachigen Raum.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -888,7 +862,7 @@
                 <!-- AUFKLÄRUNG 4 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">4</div>
                             <div class="theme-title">"Nathan der Weise" – Das Werk der Aufklärung</div>
                         </div>
@@ -898,21 +872,19 @@
                         <div class="hauptpunkte">
                             <h4>Hauptpunkte:</h4>
                             <ul>
-                                <li>Gattung: Dramatisches Gedicht, 5 Akte, klassisches Drama nach Aristoteles</li>
-                                <li>Thema: Religionstoleranz, Vernunft vs. Fanatismus, Menschlichkeit über Konfessionsgrenzen</li>
-                                <li>Behandelt: Die drei Weltreligionen gleichwertig (Judentum, Christentum, Islam)</li>
-                                <li>Kritik: Von blinden Glauben und organisierter Religion (besonders die Kirche)</li>
+                                <li>Gattung: Dramatisches Gedicht, 5 Akte, klassisches Drama</li>
+                                <li>Thema: Religionstoleranz, Vernunft vs. Fanatismus</li>
+                                <li>Behandelt die drei Weltreligionen gleichwertig</li>
+                                <li>Kritik: Von blinden Glauben und organisierter Religion</li>
                                 <li>Setzung: Vernunft und Ethik über Dogma</li>
                                 <li>Entwurf: Utopie des toleranten Miteinanders</li>
                             </ul>
                         </div>
                         <div class="monolog">
-                            <h4>3-Minolog:</h4>
+                            <h4>3-Minuten-Monolog:</h4>
                             <p>Um zu verstehen, warum „Nathan der Weise" das Werk der Aufklärung par excellence ist, muss man sich bewusst machen, was es damals bedeutete, es zu schreiben. Das war nicht ein unterhaltsames Spiel mit verschiedenen Religionen – das war politisch und philosophisch radikal.</p>
-                            <p>Das Stück behandelt drei Weltreligionen: das Judentum, vertreten durch den Titelh
-
-elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Tempelherr und den Patriarchen; und den Islam, vertreten durch Saladin und seine Schwester Sittah. Das Revolutionäre ist: Alle drei werden als wertvoll, als berechtigt dargestellt. Nathan, der weise Jude, ist der Held des Stücks. Saladin, der Muslim, wird als großmütig und edel gezeigt. Nur das Christentum wird kritisiert – aber nicht der gläubige Mensch, sondern die Institution, die Kirche, vertreten durch den fanatischen Patriarchen. Das war damals unerhört.</p>
-                            <p>Das Stück kritisiert den blinden Glauben – die Überzeugung, dass nur meine Religion recht hat, alle anderen sind falsch. Stattdessen plädiert Lessing für Vernunft und Ethik. Ein Mensch sollte sich nicht fragen: Welche Religion ist die richtige? Sondern: Wie lebe ich ein ethisches Leben? Wie behandle ich andere mit Güte und Toleranz? Das ist aufgeklärte Humanität. Das Stück ist nicht anti-religiös, aber es ist radikal pro-Vernunft und pro-Toleranz. Das macht es zum perfekten aufgeklärten Werk.</p>
+                            <p>Das Stück behandelt drei Weltreligionen: das Judentum, vertreten durch den Titelh Helden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Tempelherr und den Patriarchen; und den Islam, vertreten durch Saladin und seine Schwester Sittah. Das Revolutionäre ist: Alle drei werden als wertvoll, als berechtigt dargestellt. Nathan, der weise Jude, ist der Held des Stücks. Saladin, der Muslim, wird als großmütig und edel gezeigt. Nur das Christentum wird kritisiert – aber nicht der gläubige Mensch, sondern die Institution, die Kirche. Das war damals unerhört.</p>
+                            <p>Das Stück kritisiert den blinden Glauben – die Überzeugung, dass nur meine Religion recht hat. Stattdessen plädiert Lessing für Vernunft und Ethik. Ein Mensch sollte sich nicht fragen: Welche Religion ist die richtige? Sondern: Wie lebe ich ein ethisches Leben? Das ist aufgeklärte Humanität. Das Stück ist nicht anti-religiös, aber es ist radikal pro-Vernunft und pro-Toleranz. Das macht es zum perfekten aufgeklärten Werk.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -921,8 +893,39 @@ elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Te
                 <!-- AUFKLÄRUNG 5 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">5</div>
+                            <div class="theme-title">Motive in der Epoche der Aufklärung</div>
+                        </div>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="theme-body">
+                        <div class="hauptpunkte">
+                            <h4>Hauptpunkte:</h4>
+                            <ul>
+                                <li>Vernunft: Der Verstand als oberste Autorität</li>
+                                <li>Toleranz: Respekt vor anderen Überzeugungen und Religionen</li>
+                                <li>Bildung: Der Glaube an die Kraft von Wissen und Erziehung</li>
+                                <li>Kritik an Autorität: In Frage stellen von Kirche und absolutem Staat</li>
+                                <li>Humanismus: Der Mensch im Zentrum, nicht Gott oder Institution</li>
+                                <li>Fortschritt: Glaube an die Verbesserbarkeit der Menschheit</li>
+                            </ul>
+                        </div>
+                        <div class="monolog">
+                            <h4>3-Minuten-Monolog:</h4>
+                            <p>Die Aufklärung hat einige zentrale Motive, die sich wie ein roter Faden durch die Epoche ziehen. Das Erste und Wichtigste ist Vernunft. Das ist nicht einfach nur „Logik" – sondern der Glaube, dass der menschliche Verstand, wenn er richtig genutzt wird, die Grundlage für Wahrheit, Ethik und Gesellschaft sein sollte. Vernunft ist die höchste Autorität, nicht Tradition, nicht religiöses Dogma, nicht der Wille eines Königs.</p>
+                            <p>Damit eng verbunden ist Toleranz. Die Aufklärung predigt nicht, dass alle Religionen oder Überzeugungen gleich richtig sind. Aber sie fordert: Respektiere andere Überzeugungen, untersuche sie rational, bekämpfe sie nicht mit Feuer und Schwert, sondern mit Argumenten. Das ist radikal, wenn man bedenkt, dass noch Generationen vorher Menschen für Häresie verbrannt wurden.</p>
+                            <p>Ein anderes zentrales Motiv ist Bildung. Die Aufklärung glaubt an die Kraft von Wissen und Erziehung, um die Menschheit zu verbessern. Deshalb wird die Verbreitung von Wissen – durch Bücher, Schulen, Diskussionen – als wichtig erachtet. Dann gibt es Kritik an Autorität: Die Aufklärung fragt kritisch nach, wer uns sagt, was wir glauben und denken sollen – die Kirche? Der Staat? Ein einzelner Anführer? Die Antwort ist: Wir selbst, durch Vernunft. Schließlich ist da noch Humanismus – der Glaube, dass der Mensch, nicht Gott oder abstrakte Institutionen, im Zentrum stehen sollte. Und Fortschritt – der Optimismus, dass die Menschheit sich durch Aufklärung selbst verbessern kann.</p>
+                            <div class="timer">⏱️ ca. 3 Minuten</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AUFKLÄRUNG 6 -->
+                <div class="theme">
+                    <div class="theme-header" onclick="toggleTheme(this)">
+                        <div class="header-content">
+                            <div class="theme-number">6</div>
                             <div class="theme-title">Die Ringparabel</div>
                         </div>
                         <div class="toggle-icon">▼</div>
@@ -933,28 +936,27 @@ elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Te
                             <ul>
                                 <li>Kontext: Saladin fragt Nathan, welche Religion die wahre ist</li>
                                 <li>Antwort: Nathan erzählt eine Parabel über einen magischen Ring</li>
-                                <li>Inhalt: Vater mit drei Söhnen, drei ununterscheidbare Ringe, jeder Sohn erhält einen</li>
+                                <li>Inhalt: Vater mit drei Söhnen, drei ununterscheidbare Ringe</li>
                                 <li>Konflikt: Söhne streiten, wer den echten Ring hat</li>
-                                <li>Lösung des Richters: Alle drei sollen so handeln, als sei ihr Ring echt</li>
-                                <li>Botschaft: Wer durch Güte, Toleranz und Menschlichkeit lebt, wird sich als echt erweisen</li>
-                                <li>Bedeutung: Keine Weltreligion kann beweisen, die einzige wahre zu sein</li>
+                                <li>Lösung: Alle sollen so handeln, als sei ihr Ring echt</li>
+                                <li>Botschaft: Keine Weltreligion kann beweisen, die einzige wahre zu sein</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Die Ringparabel ist das Herzstück von Lessings „Nathan der Weise" und eine der großartigsten Allegoreien der deutschsprachigen Literatur. Saladin, der Muslim Sultan, stellt Nathan, dem Juden, eine klassische Fangfrage: Welche der drei Weltreligionen ist die wahre – das Judentum, das Christentum oder der Islam?</p>
-                            <p>Das ist eine gefährliche Frage. Wenn Nathan antwortet, dass das Judentum die wahrste ist, beleidigt er Saladin. Wenn er eine andere wählt, verrät er seinen Glauben. Aber Nathan ist weise. Statt direkt zu antworten, erzählt er eine Parabel. Es war einmal ein Vater, der besaß einen wundersamen Ring. Dieser Ring hatte die Kraft, den Träger vor Gott und Menschen wohlgefällig zu machen. Der Vater liebte seine drei Söhne gleich sehr, konnte sich aber nicht entscheiden, wem er den Ring geben sollte. Also ließ er zwei ununterscheidbare Kopien anfertigen. Jeder Sohn erhielt einen Ring, aber keiner wusste, wer den echten hat. Nach dem Tod des Vaters begannen die Söhne zu streiten, wer den echten Ring besitzt – es gibt ja kein objektives Kriterium, um es zu unterscheiden.</p>
-                            <p>Dann kommt ein Richter und gibt ein kluges Urteil: „Alle drei von euch sollen handeln, als sei euer Ring der echte." Mit anderen Worten: Lebt so, dass die Kraft des Rings sich durch euer Leben bewährt. Wer durch Güte, Toleranz, Gerechtigkeit und Menschlichkeit lebt – wessen Ring sich also durch moralisches Handeln als echt erweist – das wird die Zukunft zeigen. Die Botschaft ist genial: Keine der drei Weltreligionen kann beweisen, dass sie die einzige wahre ist. Aber das ist nicht das Wichtigste. Entscheidend ist, wie du lebst. Moral und Ethik sind wichtiger als konfessionelle Zugehörigkeit. Das ist radikale Aufklärung.</p>
+                            <p>Das ist eine gefährliche Frage. Wenn Nathan antwortet, dass das Judentum die wahrste ist, beleidigt er Saladin. Wenn er eine andere wählt, verrät er seinen Glauben. Aber Nathan ist weise. Statt direkt zu antworten, erzählt er eine Parabel. Es war einmal ein Vater, der besaß einen wundersamen Ring. Dieser Ring hatte die Kraft, den Träger vor Gott und Menschen wohlgefällig zu machen. Der Vater liebte seine drei Söhne gleich sehr, konnte sich aber nicht entscheiden, wem er den Ring geben sollte. Also ließ er zwei ununterscheidbare Kopien anfertigen. Jeder Sohn erhielt einen Ring, aber keiner wusste, wer den echten hat. Nach dem Tod des Vaters begannen die Söhne zu streiten, wer den echten Ring besitzt.</p>
+                            <p>Dann kommt ein Richter und gibt ein kluges Urteil: „Alle drei von euch sollen handeln, als sei euer Ring der echte." Mit anderen Worten: Lebt so, dass die Kraft des Rings sich durch euer Leben bewährt. Wer durch Güte, Toleranz, Gerechtigkeit und Menschlichkeit lebt – wessen Ring sich also durch moralisches Handeln als echt erweist – das wird die Zukunft zeigen. Die Botschaft ist genial: Keine der drei Weltreligionen kann beweisen, dass sie die einzige wahre ist. Aber das ist nicht das Wichtigste. Entscheidend ist, wie du lebst.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- AUFKLÄRUNG 6 -->
+                <!-- AUFKLÄRUNG 7 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">6</div>
+                        <div class="header-content">
+                            <div class="theme-number">7</div>
                             <div class="theme-title">Die Figur des Tempelherrn: Ist er eine aufgeklärte Person?</div>
                         </div>
                         <div class="toggle-icon">▼</div>
@@ -965,10 +967,10 @@ elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Te
                             <ul>
                                 <li>Charakterisierung: Zunächst antisemitisch, arrogant, fanatisch christlich</li>
                                 <li>Entwicklung: Wird durch Begegnung mit Nathan und Recha verändert</li>
-                                <li>Geheimnis: Der Tempelherr ist unbekannt Nathan's Neffe</li>
+                                <li>Geheimnis: Der Tempelherr ist unbekannt Nathans Neffe</li>
                                 <li>Transzendenz: Familie = Versöhnung der Religionen</li>
                                 <li>Aufklärung: Seine Lernfähigkeit zeigt aufgeklärte Gesinnung</li>
-                                <li>Botschaft: Auch Vorurteile können durch Vernunft und Liebe überwunden werden</li>
+                                <li>Botschaft: Vorurteile können durch Vernunft und Liebe überwunden werden</li>
                             </ul>
                         </div>
                         <div class="monolog">
@@ -981,52 +983,85 @@ elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Te
                     </div>
                 </div>
 
-                <!-- AUFKLÄRUNG 7 -->
+                <!-- AUFKLÄRUNG 8 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">7</div>
-                            <div class="theme-title">Die Figur der Daja</div>
+                        <div class="header-content">
+                            <div class="theme-number">8</div>
+                            <div class="theme-title">Nathan, der Aufklärer</div>
                         </div>
-                        <div class="theme-body">
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="theme-body">
                         <div class="hauptpunkte">
                             <h4>Hauptpunkte:</h4>
                             <ul>
-                                <li>Charakterisierung: Christliche Erzieherin Rechas, fromm, intolerant, intrigant</li>
-                                <li>Religion: Christin, enge kirchliche Gesinnung</li>
-                                <li>Konflikt: Widersetzt sich Nathans Toleranz und liberaler Erziehung</li>
-                                <li>Handlung: Verrät Nathans Geheimnis an den Patriarchen</li>
-                                <li>Motivation: Glaubt, das Richtige zu tun, indem sie „christliche Pflicht" erfüllt</li>
-                                <li>Kritik: Verkörperung von religiösem Fanatismus, nicht von Vernunft</li>
-                                <li>Gegensatz: Im Gegensatz zu aufgeklärten Personen</li>
+                                <li>Charakterisierung: Aufgeklärt, weise, tolerant, vermöglich, humanistisch</li>
+                                <li>Verkörperung: Das Ideal des aufgeklärten Menschen</li>
+                                <li>Handlung: Adoptiert Recha, obwohl sie Christin ist</li>
+                                <li>Weisheit: Antwortet Saladin mit der Ringparabel – Vernunft statt Dogma</li>
+                                <li>Pädagogik: Erzieht Recha liberal, kritisch, tolerant</li>
+                                <li>Bedeutung: Repräsentant von Vernunft und Humanität</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
-                            <p>Daja ist Nathans christliche Haushälterin und Rechas Erzieherin. Sie ist eine wichtige Figur, weil sie das Gegenteil von Aufklärung darstellt. Sie ist fromm, aber nicht aus innerem Glauben heraus, sondern aus purem kirchlichen Gehorsam. Sie ist intolerant und häufig intrigant.</p>
-                            <p>Dajas Konflikt mit Nathan ist fundamental: Nathan erzieh Recha liberal und tolerant – er behandelt sie nicht als Christin, die von den Juden verdorben würde, sondern als Mensch. Daja aber kann das nicht akzeptieren. Sie sieht das als Sünde. In ihrer Weltanschauung gibt es klare Grenzen: Christen hier, Juden dort, Moslems überall verdächtig. Nathan verstoßes gegen diese Ordnung, und das verstört sie.</p>
-                            <p>Der Höhepunkt von Dajas Unaufgeklärtheit ist, dass sie Nathans Geheimnis – dass Recha eine Christin ist, die adoptiert wurde – an den Patriarchen verrät. Sie glaubt, das Richtige zu tun. Sie meint, die „christliche Pflicht" zu erfüllen, indem sie den Patriarchen informiert, damit er handeln kann. Aber in Wirklichkeit ist das reiner Fanatismus. Sie erkennt nicht, dass sie damit Nathan und Recha schadet. Sie verkörpert die religiöse Intoleranz und den blinden Gehorsam, den die Aufklärung kritisiert. Im Gegensatz dazu stehen Figuren wie Nathan, Saladin oder sogar der Tempelherr, die aufgeklärt sind, weil sie denken, statt blind zu gehorchen.</p>
+                            <p>Nathan ist der Held des Stücks und der Repräsentant der aufgeklärten Gesinnung. Er ist nicht Lessings Ideal, weil er Jude ist – sondern weil er verkörpert, was Aufklärung bedeutet: Vernunft, Toleranz, Humanität, Unabhängigkeit vom Dogma.</p>
+                            <p>Das erste, das wir über Nathan erfahren, ist, dass er eine christliche Waise aufgezogen hat – Recha. Warum? Nicht aus religiösem Fanatismus, sondern aus Menschlichkeit. Für ihn ist Religion sekundär. Ein Kind braucht Liebe und Erziehung, nicht eine konfessionelle Identität. Das ist radikal aufgeklärt. Ein orthodoxer Jude hätte das wahrscheinlich nicht getan. Nathan aber erkennt, dass Menschlichkeit wichtiger ist als religiöse Unterschiede.</p>
+                            <p>Dann kommt die Begegnung mit Saladin. Der Sultan stellt ihm die „Religionsfalle" – die Frage nach der wahren Religion. Statt defensiv zu antworten oder zu argumentieren, antwortet Nathan mit einer Geschichte – der Ringparabel. Das ist tief aufgeklärt. Nathan versteht, dass Logik und Argument hier nicht funktionieren. Statt dessen erzählt er eine Allegorie, die Saladin selbst zum Nachdenken führt. Das ist Pädagogik auf höchstem Niveau. Nathan will nicht zwingen oder überzeugen – er will zum Denken anregen. Am Ende des Stücks wird enthüllt als Onkel von Saladin und des Tempelherrn – eine symbolisch überwältigende Auflösung. Die Familie überschreitet alle Religionsgrenzen. Nathan verkörpert damit das aufgeklärte Ideal: Menschen sind Menschen, Blut ist Blut, Liebe ist Liebe – und diese universalen Bindungen sind wichtiger als konfessionelle Unterscheidungen.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- AUFKLÄRUNG 8 -->
+                <!-- AUFKLÄRUNG 9 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">8</div>
+                        <div class="header-content">
+                            <div class="theme-number">9</div>
+                            <div class="theme-title">Die Figur der Daja</div>
+                        </div>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="theme-body">
+                        <div class="hauptpunkte">
+                            <h4>Hauptpunkte:</h4>
+                            <ul>
+                                <li>Charakterisierung: Christliche Erzieherin Rechas, fromm, intolerant, intrigant</li>
+                                <li>Religion: Christin, enge kirchliche Gesinnung</li>
+                                <li>Konflikt: Widersetzt sich Nathans Toleranz</li>
+                                <li>Handlung: Verrät Nathans Geheimnis an den Patriarchen</li>
+                                <li>Motivation: Glaubt, das Richtige zu tun</li>
+                                <li>Kritik: Verkörperung von religiösem Fanatismus</li>
+                            </ul>
+                        </div>
+                        <div class="monolog">
+                            <h4>3-Minuten-Monolog:</h4>
+                            <p>Daja ist Nathans christliche Haushälterin und Rechas Erzieherin. Sie ist eine wichtige Figur, weil sie das Gegenteil von Aufklärung darstellt. Sie ist fromm, aber nicht aus innerem Glauben heraus, sondern aus purem kirchlichen Gehorsam. Sie ist intolerant und häufig intrigant.</p>
+                            <p>Dajas Konflikt mit Nathan ist fundamental: Nathan erzieh Recha liberal und tolerant – er behandelt sie nicht als Christin, die von den Juden verdorben würde, sondern als Mensch. Daja aber kann das nicht akzeptieren. Sie sieht das als Sünde. In ihrer Weltanschauung gibt es klare Grenzen: Christen hier, Juden dort, Moslems überall verdächtig. Nathan verstößt gegen diese Ordnung, und das verstört sie.</p>
+                            <p>Der Höhepunkt von Dajas Unaufgeklärtheit ist, dass sie Nathans Geheimnis – dass Recha eine Christin ist, die adoptiert wurde – an den Patriarchen verrät. Sie glaubt, das Richtige zu tun. Sie meint, die „christliche Pflicht" zu erfüllen, indem sie den Patriarchen informiert, damit er handeln kann. Aber in Wirklichkeit ist das reiner Fanatismus. Sie erkennt nicht, dass sie damit Nathan und Recha schadet. Sie verkörpert die religiöse Intoleranz und den blinden Gehorsam, den die Aufklärung kritisiert. Im Gegensatz dazu stehen Figuren wie Nathan, die aufgeklärt sind, weil sie denken, statt blind zu gehorchen.</p>
+                            <div class="timer">⏱️ ca. 3 Minuten</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AUFKLÄRUNG 10 -->
+                <div class="theme">
+                    <div class="theme-header" onclick="toggleTheme(this)">
+                        <div class="header-content">
+                            <div class="theme-number">10</div>
                             <div class="theme-title">Die Figur des Patriarchen</div>
                         </div>
-                        <div class="theme-body">
+                        </div>
+                    <div class="theme-body">
                         <div class="hauptpunkte">
                             <h4>Hauptpunkte:</h4>
                             <ul>
                                 <li>Charakterisierung: Fanatisch, intolerant, machtgierig</li>
-                                <li>Position: Religiöse Autorität, Repräsentant der organisierten Kirche</li>
-                                <li>Ziele: Macht ausüben, Häretiker verfolgen, dogmatische Orthodoxie durchsetzen</li>
+                                <li>Position: Religiöse Autorität, Repräsentant der Kirche</li>
+                                <li>Ziele: Macht ausüben, Häretiker verfolgen, Orthodoxie durchsetzen</li>
                                 <li>Gegenbild zu Nathan: Verkörpert das Schlechteste der Religion</li>
-                                <li>Kritik Lessings: Auf die Institution Kirche, nicht auf den Glauben selbst</li>
+                                <li>Kritik Lessings: Auf die Institution Kirche, nicht auf den Glauben</li>
                                 <li>Bedeutung: Symbol des aufgeklärten Geistes vs. kirchliche Unterdrückung</li>
                             </ul>
                         </div>
@@ -1040,89 +1075,32 @@ elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Te
                     </div>
                 </div>
 
-                <!-- AUFKLÄRUNG 9 -->
-                <div class="theme">
-                    <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">9</div>
-                            <div class="theme-title">Nathan, der Aufklärer</div>
-                        </div>
-                        <div class="theme-body">
-                        <div class="hauptpunkte">
-                            <h4>Hauptpunkte:</h4>
-                            <ul>
-                                <li>Charakterisierung: Aufgeklärt, weise, tolerant, vermöglich, humanistisch</li>
-                                <li>Verkörperung: Das Ideal des aufgeklärten Menschen</li>
-                                <li>Handlung: Adoptiert Recha, obwohl sie Christin ist (zeigt Überwindung von Vorurteilen)</li>
-                                <li>Weisheit: Antwortet Saladin mit der Ringparabel – nicht mit Dogma, sondern Vernunft</li>
-                                <li>Pädagogik: Erzieht Recha liberal, kritisch, tolerant, nicht dogmatisch</li>
-                                <li>Bedeutung: Repräsentant von Vernunft und Humanität über Religionsgrenzen</li>
-                            </ul>
-                        </div>
-                        <div class="monolog">
-                            <h4>3-Minuten-Monolog:</h4>
-                            <p>Nathan ist der Held des Stücks und der Repräsentant der aufgeklärten Gesinnung. Er ist nicht Lessings Ideal, weil er Jude ist – sondern weil er verkörpert, was Aufklärung bedeutet: Vernunft, Toleranz, Humanität, Unabhängigkeit vom Dogma.</p>
-                            <p>Das erste, das wir über Nathan erfahren, ist, dass er eine christliche Waise aufgezogen hat – Recha. Warum? Nicht aus religiösem Fanatismus, sondern aus Menschlichkeit. Für ihn ist Religion sekundär. Ein Kind braucht Liebe und Erziehung, nicht eine konfessionelle Identität. Das ist radikal aufgeklärt. Ein orthodoxer Jude hätte das wahrscheinlich nicht getan. Nathan aber erkennt, dass Menschlichkeit wichtiger ist als religiöse Unterschiede.</p>
-                            <p>Dann kommt die Begegnung mit Saladin. Der Sultan stellt ihm die „Religionsfalle" – die Frage nach der wahren Religion. Statt defensiv zu antworten oder zu argumentieren, antwortet Nathan mit einer Geschichte – der Ringparabel. Das ist tief aufgeklärt. Nathan versteht, dass Logik und Argument hier nicht funktionieren. Statt dessen erzählt er eine Allegorie, die Saladin selbst zum Nachdenken führt. Das ist Pädagogik auf höchstem Niveau. Nathan will nicht zwingen oder überzeugen – er will zum Denken anregen.</p>
-                            <p>Nathan wird am Ende des Stücks enthüllt als Onkel von Saladin und des Tempelherrn – eine symbolisch überwältigende Auflösung. Die Familie überschreitet alle Religionsgrenzen. Nathan verkörpert damit das aufgeklärte Ideal: Menschen sind Menschen, Blut ist Blut, Liebe ist Liebe – und diese universalen menschlichen Bindungen sind wichtiger als konfessionelle Unterscheidungen.</p>
-                            <div class="timer">⏱️ ca. 3 Minuten</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AUFKLÄRUNG 10 -->
-                <div class="theme">
-                    <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
-                            <div class="theme-number">10</div>
-                            <div class="theme-title">Die Figur Rechas</div>
-                        </div>
-                        <div class="theme-body">
-                        <div class="hauptpunkte">
-                            <h4>Hauptpunkte:</h4>
-                            <ul>
-                                <li>Charakterisierung: Nathans Adoptivtochter, eigentlich Christin</li>
-                                <li>Naivität: Hält den Tempelherr anfangs für einen Engel (religiöse Naivität)</li>
-                                <li>Entwicklung: Durchläuft Lernprozess, wird kritischer und reifer</li>
-                                <li>Konfessionelle Identität: Später erfährt sie ihre christliche Herkunft</li>
-                                <li>Bedeutung: Verkörperung, wie Aufklärung die nächste Generation prägt</li>
-                                <li>Versöhnung: Mit Tempelherr (ihrer wahrscheinlichen Liebe) und Familie</li>
-                            </ul>
-                        </div>
-                        <div class="monolog">
-                            <h4>3-Minuten-Monolog:</h4>
-                            <p>Recha ist die junge Tochter Nathans. Sie ist zwar eine Christin nach Geburt, wurde aber von Nathan als Jüdin aufgezogen und erzogen – und das ist das Entscheidende. Sie wurde mit Vernunft und Liebe erzogen, nicht mit religiösem Dogma. Sie ist das Produkt von Nathans aufgeklärter Erziehung.</p>
-                            <p>Am Anfang des Stücks ist Recha noch relativ naiv. Sie hält den Tempelherr, der sie aus dem Feuer rettet, für einen Engel. Das ist religiöse Naivität – sie projiziert religiöse Kategorien auf die Realität. Aber durch ihre Begegnungen mit dem Tempelherr und durch die Ereignisse des Stücks lernt sie. Sie wird kritischer, reifer, weniger gläubig in einem dogmatischen Sinne. Sie lernt, die Realität nuchterner zu sehen.</p>
-                            <p>Dann erfährt sie – zu ihrer Überraschung und möglicherweise Desorientierung – dass sie von Geburt Christin ist, dass Nathan sie adoptiert hat, dass ihre ganze Identität anders ist als sie dachte. Das ist ein großer Schock. Aber sie verkraftet ihn, weil sie aufgeklärt erzogen wurde. Sie versteht, dass die biologische Herkunft ihre Liebe zu Nathan, ihrer Dankbarkeit gegenüber Nathan nicht ändert. Sie kann diese neue Realität akzeptieren, weil sie gelernt hat, flexibel zu denken. Recha verkörpert die nächste Generation, die von aufgeklärten Prinzipien geprägt ist – eine Generation, die über Religionsgrenzen hinweg denken kann.</p>
-                            <div class="timer">⏱️ ca. 3 Minuten</div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- AUFKLÄRUNG 11 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">11</div>
                             <div class="theme-title">Die Darstellung der drei Weltreligionen in Nathan der Weise</div>
                         </div>
-                        <div class="theme-body">
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="theme-body">
                         <div class="hauptpunkte">
                             <h4>Hauptpunkte:</h4>
                             <ul>
                                 <li>Judentum: Nathan und Recha – positiv: Weisheit, Toleranz, Humanismus</li>
                                 <li>Islam: Saladin und Sittah – positiv: Edelmut, Offenheit, Freigiebigkeit</li>
-                                <li>Christentum: Tempelherr, Daja, Patriarch – gespalten: Tempelherr lernfähig, Daja intolerant, Patriarch fanatisch</li>
+                                <li>Christentum: Tempelherr, Daja, Patriarch – gespalten: unterschiedliche Positionen</li>
                                 <li>Scharfste Kritik: Auf institutionelles Christentum (Patriarch)</li>
                                 <li>Botschaft: Alle Religionen haben gute und schlechte Vertreter</li>
-                                <li>Kerngedanke: Individualität vor Konfession – es kommt auf den Menschen an, nicht auf die Religion</li>
+                                <li>Kerngedanke: Individualität vor Konfession – es kommt auf den Menschen an</li>
                             </ul>
                         </div>
                         <div class="monolog">
                             <h4>3-Minuten-Monolog:</h4>
                             <p>Eine der revolutionärsten Aspekte von „Nathan der Weise" ist, wie Lessing die drei Weltreligionen darstellt. Das Stück ist fair, manchmal überraschend fair. Er behandelt sie nicht alle gleich schlecht – aber auch nicht alle gleich gut. Das zeigt differenzierte Kritik.</p>
                             <p>Das Judentum wird verkörpert durch Nathan und seine Adoptivtochter Recha. Nathan ist der weise, humane, tolerante Charakter des Stücks. Die Darstellung des Judentums ist klar positiv: Weisheit, Toleranz, Humanismus. Saladin und Sittah verkörpern den Islam. Sie werden ebenfalls positiv dargestellt – als edelmütig, großzügig, offen. Saladin ist nicht fanatisch, sondern neugierig und fair. Das Christentum wird am komplexesten dargestellt. Es hat verschiedene Vertreter: Der Tempelherr beginnt fanatisch und intolerant, wird aber durch Nathan verwandelt – das ist positiv. Daja ist fromm, aber eng und intrigant. Der Patriarch ist schlicht fanatisch und machtgierig – das ist scharf kritisiert.</p>
-                            <p>Das Interessante ist: Die schärfste Kritik trifft die Kirche als Institution, nicht die Religion als solche. Lessing kritisiert nicht den christlichen Glauben, sondern wie die kirchliche Hierarchie, vertreten durch den Patriarchen, den Glauben für Machtzwecke missbraucht. Das ist ein differenzierter Punkt. Die Botschaft ist: Alle Religionen können gute Menschen hervorbringen – Nathan, Saladin – oder schlechte – der Patriarch. Die Religion selbst ist neutral; es kommt auf den Menschen an, der sie lebt. Das ist aufgeklärte Toleranz.</p>
+                            <p>Das Interessante ist: Die scharfste Kritik trifft die Kirche als Institution, nicht die Religion als solche. Lessing kritisiert nicht den christlichen Glauben, sondern wie die kirchliche Hierarchie, vertreten durch den Patriarchen, den Glauben für Machtzwecke missbraucht. Das ist ein differenzierter Punkt. Die Botschaft ist: Alle Religionen können gute Menschen hervorbringen – Nathan, Saladin – oder schlechte – der Patriarch. Die Religion selbst ist neutral; es kommt auf den Menschen an, der sie lebt. Das ist aufgeklärte Toleranz.</p>
                             <div class="timer">⏱️ ca. 3 Minuten</div>
                         </div>
                     </div>
@@ -1131,18 +1109,20 @@ elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Te
                 <!-- AUFKLÄRUNG 12 -->
                 <div class="theme">
                     <div class="theme-header" onclick="toggleTheme(this)">
-                        <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="header-content">
                             <div class="theme-number">12</div>
                             <div class="theme-title">Das Drama Nathan der Weise – Eine Utopie?</div>
                         </div>
-                        <div class="theme-body">
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="theme-body">
                         <div class="hauptpunkte">
                             <h4>Hauptpunkte:</h4>
                             <ul>
                                 <li>Utopisches Element: Das glückliche Ende und die Versöhnung</li>
-                                <li>Enddecker: Nathan, Recha, Tempelherr und Saladin sind alle miteinander verwandt</li>
+                                <li>Enddecker: Nathan, Recha, Tempelherr und Saladin sind verwandt</li>
                                 <li>Historisch unrealistisch: 18. Jahrhundert sah solches Miteinander nicht vor</li>
-                                <li>Nathan als Jude: Hätte damals kaum Rechte gehabt, wäre unterdrückt worden</li>
+                                <li>Nathan als Jude: Hätte damals kaum Rechte gehabt</li>
                                 <li>Saladin als Herrscher: Historische Herrscher waren nicht so tolerant</li>
                                 <li>Verständnis: Das Stück ist bewusste Utopie, nicht Wirklichkeit</li>
                                 <li>Bedeutung: Lessing entwirft ein Ideal, das angestrebt werden sollte</li>
@@ -1165,18 +1145,13 @@ elden Nathan; das Christentum, vertreten durch mehrere Figuren, besonders den Te
 
     <script>
         function switchTab(tabName) {
-            // Hide all tabs
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
             
-            // Remove active class from all buttons
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
-            // Show selected tab
             document.getElementById(tabName).classList.add('active');
-            
-            // Mark button as active
             event.target.classList.add('active');
         }
 
