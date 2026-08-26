@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayPal-Gebührenrechner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-dark:#17271c;
+    --green-darker:#101c14;
+    --terracotta:#a8552f;
+    --terracotta-dark:#8a4526;
+    --olive:#8fa23c;
+    --olive-dark:#71812c;
+    --cream:#ddd0af;
+    --cream-light:#f3ecd8;
+    --orange:#cc6a3a;
+    --white:#ffffff;
+    --ink:#251d12;
+    --font-display:'Baloo 2', sans-serif;
+    --font-body:'Poppins', sans-serif;
+    --font-mono:'JetBrains Mono', monospace;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html, body{ height:100%; }
+
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    background:var(--terracotta);
+    color:var(--white);
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:14px 16px;
+  }
+
+  /* thin fixed brand strip, doesn't take up layout space */
+  .top-decor{
+    position:fixed;
+    top:0; left:0; right:0;
+    height:26px;
+    background:var(--green-dark);
+    clip-path:polygon(0 0,100% 0,100% 30%,88% 100%,74% 25%,60% 100%,46% 20%,32% 100%,18% 25%,4% 100%,0 30%);
+    z-index:0;
+  }
+
+  .page{
+    position:relative;
+    z-index:1;
+    width:100%;
+    max-width:980px;
+  }
+
+  .page-head{
+    text-align:center;
+    margin-bottom:18px;
+  }
+
+  .eyebrow{
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:0.7rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--cream);
+    margin:0 0 4px;
+  }
+
+  h1{
+    font-family:var(--font-display);
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:clamp(1.35rem,2.6vw,1.9rem);
+    line-height:1.05;
+    letter-spacing:0.01em;
+    margin:0;
+  }
+
+  .layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    align-items:stretch;
+  }
+
+  /* ---------- Calculator card ---------- */
+  .calc-card{
+    background:var(--cream);
+    border-radius:22px;
+    padding:clamp(18px,2.6vw,28px);
+    color:var(--ink);
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:100%;
+  }
+
+  .field{ margin-bottom:14px; }
+
+  .field label{
+    display:block;
+    font-weight:600;
+    font-size:0.88rem;
+    margin-bottom:8px;
+    color:var(--ink);
+  }
+
+  .amount-row{
+    display:flex;
+    align-items:center;
+    background:var(--white);
+    border:2px solid var(--cream);
+    border-radius:14px;
+    padding:2px 6px 2px 16px;
+    transition:border-color .15s ease;
+  }
+
+  .amount-row:focus-within{ border-color:var(--olive); }
+
+  .amount-row input{
+    border:none;
+    outline:none;
+    background:transparent;
+    font-family:var(--font-mono);
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--ink);
+    width:100%;
+    padding:10px 0;
+  }
+
+  .amount-row span{
+    font-family:var(--font-mono);
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--terracotta);
+    padding-right:8px;
+  }
+
+  .fee-basis{
+    display:block;
+    background:var(--cream-light);
+    border-radius:12px;
+    padding:10px 14px;
+    margin:14px 0 16px;
+    font-size:0.78rem;
+    font-weight:600;
+    color:var(--terracotta-dark);
+    line-height:1.5;
+  }
+
+  .fee-basis strong{ color:var(--ink); }
+
+  .btn-primary{
+    width:100%;
+    background:var(--olive);
+    color:var(--white);
+    border:none;
+    border-radius:999px;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:0.95rem;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    padding:13px 20px;
+    cursor:pointer;
+    box-shadow:0 6px 0 var(--olive-dark);
+    transition:transform .08s ease, box-shadow .08s ease;
+  }
+
+  .btn-primary:active{
+    transform:translateY(4px);
+    box-shadow:0 2px 0 var(--olive-dark);
+  }
+
+  /* ---------- Ticket stub result ---------- */
+  .ticket{
+    background:var(--cream);
+    border-radius:20px;
+    padding:clamp(18px,2.6vw,28px) clamp(16px,2.6vw,26px) 20px;
+    position:relative;
+    color:var(--ink);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:100%;
+  }
+
+  .ticket::before,
+  .ticket::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:28px; height:28px;
+    background:var(--terracotta);
+    border-radius:50%;
+  }
+  .ticket::before{ left:-14px; }
+  .ticket::after{ right:-14px; }
+
+  .ticket-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-bottom:14px;
+  }
+
+  .ticket-head h2{
+    font-family:var(--font-display);
+    text-transform:uppercase;
+    font-size:1rem;
+    margin:0;
+    color:var(--terracotta-dark);
+    letter-spacing:0.02em;
+  }
+
+  .ticket-head .ticket-type{
+    font-family:var(--font-body);
+    font-size:0.68rem;
+    font-weight:600;
+    color:var(--olive);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .price-hero{
+    background:var(--olive);
+    border-radius:16px;
+    padding:14px 16px;
+    text-align:center;
+    margin-bottom:14px;
+  }
+
+  .price-hero .label{
+    font-size:0.68rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.07em;
+    color:var(--green-darker);
+    margin-bottom:4px;
+  }
+
+  .price-hero .value{
+    font-family:var(--font-mono);
+    font-weight:700;
+    font-size:clamp(1.6rem,3.4vw,2.3rem);
+    color:var(--white);
+  }
+
+  .ticket-stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    padding-bottom:16px;
+  }
+
+  .stat{ text-align:center; }
+
+  .stat .label{
+    font-size:0.6rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--terracotta-dark);
+    margin-bottom:5px;
+  }
+
+  .stat .value{
+    font-family:var(--font-mono);
+    font-weight:700;
+    font-size:clamp(0.85rem,1.7vw,1.05rem);
+  }
+
+  .stat.fee .value{ color:var(--orange); }
+  .stat.net .value{ color:var(--olive-dark); }
+
+  .perforation{
+    border-top:2px dashed #b8a67d;
+    margin:0 -2px;
+  }
+
+  .ticket-formula{
+    padding-top:14px;
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    color:var(--terracotta-dark);
+    line-height:1.6;
+    text-align:center;
+  }
+
+  @media (max-width:760px){
+    .layout{ grid-template-columns:1fr; }
+    body{ align-items:flex-start; padding-top:36px; }
+    .ticket::before,.ticket::after{ display:none; }
+  }
+
+  :focus-visible{ outline:3px solid var(--orange); outline-offset:2px; }
+</style>
+</head>
+<body>
+
+<div class="top-decor"></div>
+
+<div class="page">
+  <div class="page-head">
+    <p class="eyebrow">Tickets &amp; Gutscheine · Online-Zahlung</p>
+    <h1>PayPal-Gebührenrechner</h1>
+  </div>
+
+  <div class="layout">
+    <form class="calc-card" id="calcForm">
+      <div class="field">
+        <label for="amount">Wie viel möchtest du netto erhalten?</label>
+        <div class="amount-row">
+          <input type="number" id="amount" inputmode="decimal" step="0.01" min="0" value="25.00">
+          <span>€</span>
+        </div>
+      </div>
+
+      <div class="fee-basis">
+        PayPal-Gebühr <strong>Waren &amp; Dienstleistungen</strong> (Inland/EWR): <strong>2,49&nbsp;% + 0,35&nbsp;€</strong>
+      </div>
+
+      <button type="submit" class="btn-primary">Berechnen</button>
+    </form>
+
+    <div class="ticket" aria-live="polite">
+      <div class="ticket-head">
+        <h2>Ergebnis</h2>
+        <span class="ticket-type" id="ticketType">Waren &amp; Dienstleistungen</span>
+      </div>
+      <div class="price-hero" id="priceHero">
+        <div class="label">Preis, den du verlangst</div>
+        <div class="value" id="statGross">–</div>
+      </div>
+      <div class="ticket-stats">
+        <div class="stat fee">
+          <div class="label">PayPal-Gebühr</div>
+          <div class="value" id="statFee">–</div>
+        </div>
+        <div class="stat net">
+          <div class="label">Du erhältst netto</div>
+          <div class="value" id="statNet">–</div>
+        </div>
+      </div>
+      <div class="perforation"></div>
+      <p class="ticket-formula" id="statFormula">–</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const FEE = { percent: 2.49, fixed: 0.35 };
+
+  const amountEl    = document.getElementById('amount');
+  const form        = document.getElementById('calcForm');
+
+  const statGross   = document.getElementById('statGross');
+  const statFee     = document.getElementById('statFee');
+  const statNet     = document.getElementById('statNet');
+  const statFormula = document.getElementById('statFormula');
+
+  function eur(n){
+    return n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  }
+  function pct(n){
+    return n.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
+  }
+
+  function calculate(){
+    const net = Math.max(0, parseFloat(amountEl.value) || 0);
+    const gross = (net + FEE.fixed) / (1 - FEE.percent / 100);
+    const fee = gross - net;
+
+    statGross.textContent = eur(gross);
+    statFee.textContent = '− ' + eur(fee);
+    statNet.textContent = eur(net);
+    statFormula.textContent = `${pct(FEE.percent)} von ${eur(gross)} + ${eur(FEE.fixed)} = ${eur(fee)} Gebühr`;
+  }
+
+  form.addEventListener('submit', e => { e.preventDefault(); calculate(); });
+  amountEl.addEventListener('input', calculate);
+
+  calculate();
+</script>
+
+</body>
+</html>
